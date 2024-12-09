@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Advanced Tables</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!-- პირველი ცხრილი -->
+            <table>
+                <caption>List of Participants</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tt">John Doe</td>
+                        <td>28</td>
+                        <td>john.doe@example.com</td>
+                        <td class="rate"><!-- აქ სტარ ბლოკია td-ში -->
+                            <div class="stars">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>32</td>
+                        <td>jane.smith@example.com</td>
+                        <td class="rate"><!-- აქ სტარ ბლოკია td-ში -->
+                            <div class="stars">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tom Brown</td>
+                        <td>45</td>
+                        <td>tom.brown@example.com</td>
+                        <td class="rate"><!-- აქ სტარ ბლოკია td-ში -->
+                            <div class="stars">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Susan Clark</td>
+                        <td>37</td>
+                        <td>susan.clark@example.com</td>
+                        <td class="rate"><!-- აქ სტარ ბლოკია td-ში -->
+                            <div class="stars">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Michael Lee</td>
+                        <td>25</td>
+                        <td>michael.lee@example.com</td>
+                        <td class="rate"><!-- აქ სტარ ბლოკია td-ში -->
+                            <div class="stars">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img class="active" src="./css/img/1.svg" alt="star">
+                                <img src="./css/img/2.svg" alt="star">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- მეორე ცხრილი -->
+
+            <table>
+                <caption>Weekly Activity Schedule</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Time Slot</th>
+                        <th scope="col">Monday</th>
+                        <th scope="col">Tuesday</th>
+                        <th scope="col">Wednesday</th>
+                        <th scope="col">Thursday</th>
+                        <th scope="col">Friday</th>
+                        <th scope="col">Saturday</th>
+                        <th scope="col">Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Morning</th>
+                        <td rowspan="3">Yoga Class</td>
+                        <td>Work</td>
+                        <td colspan="3">Team Meeting</td>
+                        <td>Gym</td>
+                        <td>Relax</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Afternoon</th>
+                        <td>Project Work</td>
+                        <td colspan="3">Team Meeting</td>
+                        <td>Shopping</td>
+                        <td>Family Time</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Evening</th>
+                        <td>Dinner</td>
+                        <td colspan="2">Study</td>
+                        <td>Relax</td>
+                        <td>Movie Night</td>
+                        <td>Preparation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- მესამე ცხრილი -->
+            <table class="table__three">
+                <caption>Shopping Cart</caption>
+                <thead>
+                    <tr>
+                        <th id="item">Item Name</th>
+                        <th id="quantity">Quantity</th>
+                        <th id="price">Price per Item</th>
+                        <th id="total">Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="item">Laptop</td>
+                        <td headers="quantity">1</td>
+                        <td headers="price">$1200</td>
+                        <td headers="total">$1200</td>
+                    </tr>
+                    <tr>
+                        <td headers="item">Mouse</td>
+                        <td headers="quantity">2</td>
+                        <td headers="price">$25</td>
+                        <td headers="total">$50</td>
+                    </tr>
+                    <tr>
+                        <td headers="item">Keyboard</td>
+                        <td headers="quantity">1</td>
+                        <td headers="price">$100</td>
+                        <td headers="total">$100</td>
+                    </tr>
+                    <tr>
+                        <td headers="item">Headphones</td>
+                        <td headers="quantity">1</td>
+                        <td headers="price">$200</td>
+                        <td headers="total">$200</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td>$1550</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <!-- მეოთხე ცხრილი -->
+            <table>
+                <caption>Calendar for December</caption>
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
