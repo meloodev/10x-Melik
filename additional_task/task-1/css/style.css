@@ -1,0 +1,240 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+*::before,
+*::after {
+    display: inline-block;
+}
+
+
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    background-color: #611ECB;
+    padding-top: 40px;
+    color: #333333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 45px 112px 0px rgba(0, 0, 0, 0.06);
+    table-layout: fixed;
+}
+
+table input {
+    cursor: pointer;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    text-align: center;
+    width: 52px;
+}
+
+.container {
+    max-width: 1010px;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+thead tr {
+    height: 40px;
+}
+
+thead th {
+    border-bottom: 1px solid #E1CFFF;
+    text-align: left;
+    color: #0F1419;
+    background-color: #f5f5f5;
+}
+
+table th,
+table tr {
+    line-height: 190%;
+}
+
+
+tbody td {
+    text-align: left;
+    height: 60px;
+    width: 190px;
+}
+
+
+tbody tr:not(:last-child) {
+    border-bottom: 1px solid #E1CFFF;
+}
+
+tbody tr:hover {
+    background-color: rgb(238, 227, 255);
+    font-weight: 600;
+    color: #6926D7;
+}
+
+tbody tr:hover .castom {
+    border-color: #6926D7;
+}
+
+
+
+
+tbody tr:hover svg.active {
+    fill: #6926D7;
+}
+
+tbody tr:hover svg.disabled {
+    fill: #ffffff;
+}
+
+tbody tr svg.active {
+    fill: #6926D7;
+}
+
+tbody tr svg.disabled {
+    fill: #EEE3FF;
+}
+
+
+
+.stars {
+    display: flex;
+    gap: 0.188em;
+    max-width: 120px;
+    align-items: center;
+}
+
+.stars svg {
+    width: 15px;
+    height: auto;
+}
+
+.stars svg.active {
+    cursor: pointer;
+}
+
+.rate {
+    width: 120px;
+}
+
+.stars svg.active:hover {
+    scale: 1.1;
+}
+
+.stars svg.active:active {
+    animation: shake 0.1s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-1px);
+    }
+
+    50% {
+        transform: translateX(1px);
+    }
+
+    75% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.checkbox {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.castom {
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #B5B5B5;
+    border-radius: 2px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+table label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.castom::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 49%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background: url('../img/checked.svg') 0 0 no-repeat;
+    scale: 0;
+}
+
+.checkbox:checked+.castom::before {
+    scale: 1;
+}
+
+.checkbox:checked+.castom {
+    background-color: #0075ff;
+    border: 1px solid #0075ff;
+}
+
+.checkbox:checked+.castom:hover {
+    background-color: #2b7cd9;
+    border: 1px solid #2b7cd9;
+}
+
+/* not response */
