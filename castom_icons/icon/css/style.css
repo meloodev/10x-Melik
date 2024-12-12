@@ -1,0 +1,57 @@
+html {
+    box-sizing: content-box;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+*::before,
+*::after {
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    border: 1px solid #d2d2d2;
+    border-radius: 8px;
+}
