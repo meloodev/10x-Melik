@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 160%;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #4b6cb7;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+h1 {
+    color: #f0f8ff;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+    color: darkred;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffd700;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+#about {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 18px 5px 10px 5px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    position: relative;
+}
+
+#about div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #d2d2d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about div span {
+    font-size: 13px;
+    font-weight: 900;
+    opacity: .6;
+}
+
+#about div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: 24px;
+    text-decoration: underline;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-top: auto;
+}
+
+
+.project1 {
+    background-color: #ffcccb;
+}
+
+.project2 {
+    background-color: #b0e0e6;
+}
+
+.project3 {
+    background-color: #d3ffd3;
+}
+
+#projects .project1,
+#projects .project2,
+#projects .project3 {
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#projects>div>h3 {
+    color: darkgreen;
+    font-size: 20px;
+}
+
+#skills {
+    background-color: #fff8dc;
+    padding: 20px;
+}
+
+#skills ul {
+    list-style-type: none;
+}
+
+#skills li {
+    font-weight: bold;
+    position: relative;
+    padding-left: 28px;
+}
+
+#skills li::before {
+    content: "";
+    position: absolute;
+    background: url("../img/star.svg") 0 0 no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+#testimonials {
+    background-color: #f0f8ff;
+    padding: 20px;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    border-left: 5px solid #4b6cb7;
+    padding-left: 10px;
+}
