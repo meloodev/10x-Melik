@@ -1,4 +1,4 @@
-/* @import url(./null.css); */
+@import url(./null.css);
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 body {
@@ -151,7 +151,7 @@ thead tr th:nth-child(4) {
     font-size: 14px;
     padding: 9px 12px 9px 28px;
     background-color: #C3FCE1;
-    width: 48px;
+    width: 90px;
     border-radius: 8px;
     position: relative;
     cursor: pointer;
