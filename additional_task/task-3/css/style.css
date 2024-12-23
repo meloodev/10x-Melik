@@ -1,0 +1,593 @@
+/* https://www.youtube.com/watch?v=_jWteSj7HmI */
+
+@import url(./null.css);
+
+body {
+    font-family: "Roboto", serif;
+    font-size: 16px;
+    color: #9ca3af;
+    /* background: linear-gradient(to bottom, #0f172a, #0b111f);
+    height: 100vh; */
+    background-color: #0f172a;
+    /* background-color: #dfdfdf; */
+
+}
+
+.container {
+    max-width: 810px;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+header {
+    min-height: 30px;
+    padding: 32px 0;
+    margin-bottom: 48px;
+}
+
+header nav .burger {
+    position: relative;
+    width: 17px;
+    height: 12px;
+    cursor: pointer;
+
+
+}
+
+header nav .burger::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.125rem;
+    top: 0px;
+    background-color: #9ca3af;
+    border-radius: 1px;
+    /* transition: .3s all ease-in-out; */
+}
+
+
+header nav .burger.active::before {
+    transition: .3s all ease-in-out;
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+header nav .burger.active::after {
+    transition: .3s all ease-in-out;
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+header nav .burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.125rem;
+    bottom: 0px;
+    background-color: #9ca3af;
+    border-radius: 1px;
+    /* transition: .3s all ease-in-out; */
+}
+
+header nav .burger span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 0.125rem;
+    background-color: #9ca3af;
+    border-radius: 1px;
+}
+
+header nav .burger.active span {
+    visibility: hidden;
+}
+
+
+header nav .burger:hover span,
+header nav .burger:hover::before,
+header nav .burger:hover::after {
+    background-color: #ffffff;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    cursor: pointer;
+}
+
+header .header__map {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+header .header__map svg {
+    width: .75rem;
+    height: .75rem;
+
+}
+
+header .signup {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+header .signup__btn {
+    color: #ffffff;
+    padding: 6.5px 14px;
+    border-radius: 99px;
+    background: linear-gradient(to right, #3b82f6, #1d4fd8);
+}
+
+header .signup__btn:hover {
+    background: linear-gradient(to right, #3b82f6, #3b82f6);
+}
+
+
+.signup__btn span {
+    padding: 0px 15px;
+    /* font-size: 15px; */
+    /* font-weight: 500; */
+}
+
+header .signup__login:hover {
+    color: #ffffff;
+}
+
+header nav ul li:hover {
+    color: #ffffff;
+}
+
+header nav ul li:hover svg {
+    stroke: #ffffff;
+}
+
+.changelog {
+    position: relative;
+    color: #93c5fd;
+}
+
+.changelog::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #0ea5e9;
+    top: -4px;
+    right: -12px;
+}
+
+.changelog::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #0ea5e9;
+    top: -4px;
+    right: -12px;
+}
+
+@keyframes ping {
+
+    75%,
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.changelog::before {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.practice {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #1e293c;
+}
+
+.practice__btn-inner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+}
+
+.practice__btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px dashed #c084fc;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.practice__btn .skill-item {
+    color: #c084fc;
+}
+
+.practice__btn .header__watch {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.practice__btn img {
+    width: 16px;
+    height: 16px;
+}
+
+.practice__header-text {
+    color: #c084fc;
+    padding-left: 4px;
+    font-size: 16px;
+}
+
+.practice__header-text .skill__up {
+    display: none;
+}
+
+.practice__btn:hover {
+    border-color: #e9d5ff;
+}
+
+.practice__btn:hover .skill-item {
+    color: #e9d5ff;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.25;
+    background: linear-gradient(#e7ceef, #b772f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+}
+
+.practice__descr {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.75rem;
+}
+
+.practice__descr-mobile {
+    display: none;
+}
+
+.role {
+    padding-bottom: 3.5rem;
+
+}
+
+.role__items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .5rem;
+}
+
+.role__header {
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 3.5rem;
+}
+
+.role__header h2 {
+    display: inline-block;
+    color: #94a3b8;
+    background-color: #0f172a;
+    padding: 4px 12px;
+    font-size: 16px;
+    border: 1px solid #1e293c;
+    border-radius: .5rem;
+}
+
+
+.role__item {
+    position: relative;
+    padding: 14px;
+    background-color: #0f172a;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    cursor: pointer;
+}
+
+
+/* .role__item img {
+    display: none; 
+} */
+
+
+
+.card__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/card-icon-brown.svg);
+    top: 8px;
+    right: 8px;
+}
+
+.role__item:hover .card__icon {
+    background-image: url(../img/card-icon-light.svg);
+}
+
+.role__item .card__icon:hover {
+    background-image: url(../img/card-icon-white.svg);
+}
+
+.role__item .card__icon:active {
+    background-image: url(../img/card-icon-white2.svg);
+}
+
+
+.role__item:hover {
+    border: 1px solid #475569;
+}
+
+
+.role__item span {
+    color: #94a3b8;
+    font-size: 19px;
+}
+
+
+.role__item.new button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.role__item.new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 53px;
+    background-color: #0f172a;
+}
+
+.role__item.new {
+    border: 1px dashed #1f2937;
+}
+
+.role__item.new:hover {
+    border: 1px dashed #4b5563;
+}
+
+.role__item.new:hover span,
+.role__item.new:hover svg {
+    stroke: #d1d5db;
+}
+
+.role__item.new button {
+    background-color: transparent;
+}
+
+.role__item.new button span {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.role__item .fresh {
+    position: absolute;
+    bottom: 4px;
+    right: 7px;
+    font-size: 12px;
+    color: #d8b4fe;
+    font-weight: 500;
+    padding-left: 14px;
+}
+
+.role__item .fresh::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #a855f7;
+    /* left: 0px;
+    top: 50%;
+    transform: translateY(-50%); */
+    left: 0px;
+    top: 0.200rem;
+}
+
+.role__item .fresh::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #a855f7;
+    /* left: 0px;
+    top: .1966rem; */
+    /* left: 0px;
+    top: 25%;
+    transform: translateY(-50%); */
+    left: 0px;
+    top: 0.200rem;
+
+}
+
+
+@keyframes news {
+
+    75%,
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.role__item .fresh::after {
+    animation: news 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@media (max-width: 768px) {
+    .role__items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .changelog {
+        display: none;
+    }
+}
+
+@media (max-width: 639px) {
+
+    .header__start {
+        display: none;
+    }
+
+    header .header__map {
+        display: none;
+    }
+
+    header .signup {
+        display: none;
+    }
+
+    .header__burger {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .header__teams {
+        order: 1;
+        color: #93c5fd;
+        position: relative;
+    }
+
+    .header__teams::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #0ea5e9;
+        top: -4px;
+        right: -12px;
+    }
+
+    .header__teams::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #0ea5e9;
+        top: -4px;
+        right: -12px;
+    }
+
+    @keyframes ping {
+
+        75%,
+        to {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+    .header__teams::before {
+        animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    /* //////////// */
+
+
+
+    .header__inner {
+        display: block;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .practice__btn-inner {
+        justify-content: left;
+    }
+
+    .practice__header-text {
+        font-size: 14px;
+    }
+
+    .skill__projects {
+        display: none;
+    }
+
+    .practice__header-text .skill__up {
+        display: block;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .practice__btn {
+        margin-bottom: 20px;
+    }
+
+    header {
+        margin-bottom: 0px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .practice__descr-mobile {
+        display: block;
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.50rem;
+    }
+
+    .practice__descr-desctop {
+        display: none;
+    }
+
+    .practice {
+        padding-bottom: 2rem;
+    }
+
+    .role__header {
+        margin-bottom: 1.2rem;
+        text-align: left;
+    }
+
+    .role__item span {
+        font-size: 16px;
+    }
+
+    .role__items {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .role__item .fresh {
+        font-size: 10px;
+    }
+
+    .role__item .fresh::before,
+    .role__item .fresh::after {
+        top: .120rem;
+    }
+
+    .practice__btn {
+        padding: 11px 12px;
+    }
+}
