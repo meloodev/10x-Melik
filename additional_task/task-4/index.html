@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>PX to REM</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="converter">
+                <h1>PX to REM <span>converter</span></h1>
+                <div class="converter__inner">
+                    <div class="convert__item">
+                        <label for="px">Pixels</label>
+                        <div class="convert__px-inner">
+                            <input class="input" id="px" type="number" value="16">
+                            <abbr class="unit">px</abbr>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <div class="convert__item">
+                        <label for="rem">REM</label>
+                        <div class="convert__rem-inner">
+                            <input class="input" id="rem" type="number" value="1">
+                            <abbr class="unit">rem</abbr>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="converter__descr">
+                    <p>
+                        <span>Calculation based on a <span class="descr__root">root font-size</span> of</span>
+                        <input id="base" type="number" value="16">
+                        <sub><label for="base">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="8px" viewBox="0 -960 960 960"
+                                    width="8px" fill="#c3d2e8">
+                                    <path
+                                        d="m403-96-22-114q-23-9-44.5-21T296-259l-110 37-77-133 87-76q-2-12-3-24t-1-25q0-13 1-25t3-24l-87-76 77-133 110 37q19-16 40.5-28t44.5-21l22-114h154l22 114q23 9 44.5 21t40.5 28l110-37 77 133-87 76q2 12 3 24t1 25q0 13-1 25t-3 24l87 76-77 133-110-37q-19 16-40.5 28T579-210L557-96H403Zm59-72h36l19-99q38-7 71-26t57-48l96 32 18-30-76-67q6-17 9.5-35.5T696-480q0-20-3.5-38.5T683-554l76-67-18-30-96 32q-24-29-57-48t-71-26l-19-99h-36l-19 99q-38 7-71 26t-57 48l-96-32-18 30 76 67q-6 17-9.5 35.5T264-480q0 20 3.5 38.5T277-406l-76 67 18 30 96-32q24 29 57 48t71 26l19 99Zm18-168q60 0 102-42t42-102q0-60-42-102t-102-42q-60 0-102 42t-42 102q0 60 42 102t102 42Zm0-144Z" />
+                                </svg>
+                            </label></sub>
+                        <span>pixel.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="wrapper__footer">&copy; The project is in the development stage. 10x <span>school</span></p>
+    </div>
+   
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
