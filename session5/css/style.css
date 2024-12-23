@@ -38,7 +38,7 @@ header nav {
     background: linear-gradient(#FAEACA, #EFCFA4);
     border-radius: 99px;
     padding: 5px 5px 5px 20px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     box-shadow: 0px 4px 4px #00000040;
 }
 
@@ -111,10 +111,9 @@ header nav ul li:hover {
 }
 
 .mystic__card {
-    /* width: 238px; */
     width: 320px;
     padding: 0 41px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     
     text-align: center;
     position: relative;
