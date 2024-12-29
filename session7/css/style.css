@@ -929,8 +929,8 @@ h1 {
     width: 13px;
     height: 17px;
     border-radius: 50%;
-    bottom: 25px;
-    left: -20px;
+    bottom: 28px;
+    left: -19px;
     box-shadow: 6px 12px 0 #ffffff;
     z-index: 4;
 }
@@ -941,14 +941,14 @@ h1 {
     width: 13px;
     height: 17px;
     border-radius: 50%;
-    bottom: 25px;
-    left: 57px;
+    bottom: 28px;
+    left: 56px;
     box-shadow: -6px 12px 0 #ffffff;
     z-index: 4;
 }
 
 .card__footer-profile .profile {
-    margin-top: -25px;
+    margin-top: -22px;
     outline: 8px solid #ffffff;
     backdrop-filter: blur(5.5px);
     border-radius: 50%;
@@ -997,7 +997,7 @@ h1 {
 
 .profile-shadow {
     position: absolute;
-    top: 34px;
+    top: 38px;
     left: 50%;
     transform: translateX(-50%);
     width: 61px;
