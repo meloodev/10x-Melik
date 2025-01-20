@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Bebas-Neue-Regular';
+    src: url('../fonts/bebas-neue-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas-Neue-Bold';
+    src: url('../fonts/BebasNeue-semibold.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'FiraGO-Normal';
+    src: url('../fonts/firago-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'FiraGO-Semibold';
+    src: url('../fonts/firago-semibold.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FiraGO-Bold';
+    src: url('../fonts/firago-bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
