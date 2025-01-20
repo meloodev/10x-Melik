@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <div class="form__wrapper">
+        <div class="container">
+            <form class="form">
+                <div class="form__header">Input Form</div>
+                <div class="form__fullname">
+                    <label for="name">Full Name</label>
+                    <div class="form__fullname-inputs">
+                        <input id="name" type="text" placeholder="John">
+                        <input type="text" placeholder="Doe">
+                    </div>
+                </div>
+
+                <div class="form__location">
+                    <select>
+                        <option value="new-york-us" selected>New York, United States</option>
+                        <option value="london-gb">London, United Kingdom</option>
+                        <option value="toronto-ca">Toronto, Canada</option>
+                        <option value="sydney-au">Sydney, Australia</option>
+                        <option value="berlin-de">Berlin, Germany</option>
+                        <option value="paris-fr">Paris, France</option>
+                        <option value="rome-it">Rome, Italy</option>
+                        <option value="madrid-es">Madrid, Spain</option>
+                        <option value="tokyo-jp">Tokyo, Japan</option>
+                        <option value="beijing-cn">Beijing, China</option>
+
+                    </select>
+                    <img class="location" src="./img/location.svg" alt="loc-icon">
+                    <img class="arrow" src="./img/arrow.svg" alt="arrow">
+                </div>
+
+                <div class="radio__inputs">
+                    <div class="radio__input">
+                        <label>
+                            <input type="radio" name="option" checked>
+                            <span class="custom-radio"></span>
+                            Radio 1
+                        </label>
+                    </div>
+                    <div class="radio__input">
+                        <label>
+                            <input type="radio" name="option">
+                            <span class="custom-radio"></span>
+                            Radio 2
+                        </label>
+                    </div>
+                </div>
+
+                <div class="company__inputs">
+                    <div class="company__info">
+                        <label for="com-name">Company information</label>
+                        <input type="text" id="com-name" placeholder="Company name">
+                    </div>
+
+                    <div class="form__textarea">
+                        <label for="textarea">
+                            <img src="./img/info.svg" alt="info">
+                            Describe your case</label>
+                        <textarea id="textarea" placeholder="Tell us about your use case..."></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form__phone">
+                    <label for="inp-phone">Phone number</label>
+                    <div class="form__phone-input">
+                        <input type="tel" autocomplete="tel" placeholder="Phone number">
+                        <button id="inp-phone" data-code="+995">
+                            <span class="country__flag"><img src="./img/flags/georgia.png" alt="country__name"></span>
+                            <span class="country__code">+370</span>
+                            <span class="country__icon"><img src="./img/arrow.svg" alt="arrow"></span>
+                        </button>
+
+                        <ul class="form__countries">
+                            <!-- <li>
+                                <img src="./img/flag.svg" alt="country__flag">
+                                <span>+370</span>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form__credit">
+                    <label for="credit-card">Credit card information</label>
+                    <input class="form__creditnum" id="credit-card" type="text" placeholder="Credit card no.">
+                    <div class="form__credit-info">
+                        <input class="form__expiry" type="text" placeholder="MM / YY">
+                        <input class="form__ccv" type="text" placeholder="CCV">
+                    </div>
+                </div>
+
+                <div class="form__choose-items">
+                    <div class="form__choose-item">
+                        <label>
+                            <input type="checkbox" name="checkbox">
+                            <span class="custom-checkbox"></span>
+                            Value 1
+                        </label>
+                    </div>
+                    <div class="form__choose-item">
+                        <label>
+                            <input type="checkbox" name="checkbox">
+                            <span class="custom-checkbox"></span>
+                            Value 2
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit">
+                    <span>Submit</span>
+                    <img src="./img/arrow-right.svg" alt="submit">
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
