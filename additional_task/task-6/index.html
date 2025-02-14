@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/svg" href="./favicon.svg">
+    <title>Password Generator</title>
+</head>
+
+<body>
+
+
+
+
+    <div class="wrapper">
+        <div class="container container__border">
+            <div class="wrapper__header">
+                <h1 class="wrapper__title">Password Generator</h1>
+                <div class="password__content">
+                    <!-- <input class="password" type="text" value=""> -->
+                    <div class="password"></div>
+                    <div class="password__content-icons">
+                        <div class="refresh__icon" title="Refresh"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        <div class="copy__icon" title="Copy password"><i class="fa-solid fa-copy"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tumblers">
+                <div class="tumbler__container">
+                    <div class="indicator"></div>
+                    <div class="wrapper__range">
+                        <label for="range">Password length: <span class="length">12</span></label>
+                        <input class="rage__val" type="range" id="range" min="6" max="25" step="1" value="15">
+                    </div>
+                    <div class="tumblers__inner">
+                        <div class="tumb_one tumbler" data-case="uppercase">
+                            <div class="tumb__title">
+                                <label for="btn_one" class="tumb-lab">Uppercase</label>
+                            </div>
+                            <div class="tumb">
+                                <label class="tumb-wrap">
+                                    <input class="inp" type="checkbox" id="btn_one" checked>
+                                    <span class="btn"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="tumb_two tumbler" data-case="lowercase">
+                            <div class="tumb__title">
+                                <label for="btn_two" class="tumb-lab">Lowercase</label>
+                            </div>
+                            <div class="tumb">
+                                <label class="tumb-wrap">
+                                    <input class="inp" type="checkbox" id="btn_two" checked>
+                                    <span class="btn"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="tumb_three tumbler" data-case="numbers">
+                            <div class="tumb__title">
+                                <label for="btn_three" class="tumb-lab">Numbers</label>
+                            </div>
+                            <div class="tumb">
+                                <label class="tumb-wrap">
+                                    <input class="inp" type="checkbox" id="btn_three" checked>
+                                    <span class="btn"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="tumb_four tumbler" data-case="symbols">
+                            <div class="tumb__title">
+                                <label for="btn_four" class="tumb-lab">Symbols</label>
+                            </div>
+                            <div class="tumb">
+                                <label class="tumb-wrap">
+                                    <input class="inp" type="checkbox" id="btn_four" checked>
+                                    <span class="btn"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tumblers__descr"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal__tittle modal-item">Copied value to the clipboard</div>
+        <span class="modal__password modal-item"></span>
+    </div>
+
+
+    <!-- <img src="../src/img/template.jpg" alt="img"> -->
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
