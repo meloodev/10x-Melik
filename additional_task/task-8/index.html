@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>imdb</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="head">
+                    <li>
+                        <a href="#!"><img src="./img/logo.svg" alt="logo"></a>
+                        <div class="menu">
+                            <img src="./img/burger.svg" alt="burger">
+                            <span>menu</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="search">
+                            <div class="search__item">
+                                <span>all</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="#000" role="presentation">
+                                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                    <path
+                                        d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="search__item">
+                                <label for="search-inp">
+                                    <img src="./img/search-icon.svg" alt="search-icon">
+                                </label>
+                                <input id="search-inp" type="text" placeholder="Search IMDb">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar">
+                        <ul>
+                            <li>
+                                <img src="./img/logo-2.svg" alt="logo-alter">
+                            </li>
+                            <li class="watchlist">
+                                <img src="./img/watchlist.svg" alt="watchlist">
+                                <span>watchlist</span>
+                            </li>
+                            <li class="signin">
+                                <button>sign in</button>
+                            </li>
+                            <li class="language">
+                                <span>en</span>
+                                <img src="./img/arrow-down-w.svg" alt="arrow-down">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="card">
+            <div class="decore"></div>
+            <div class="container">
+                <nav class="card__header">
+                    <ul>
+                        <li><a href="#!">Cast & crew</a></li>
+                        <li><a href="#!">User reviews</a></li>
+                        <li><a href="#!">Trivia</a></li>
+                        <li><a href="#!">IMDbPro</a></li>
+                        <li><a href="#!">
+                                <img src="./img/topics.svg" alt="">
+                                <span>All topics</span></a></li>
+                        <li><a href="#!"><img src="./img/share.svg" alt="share"></a></li>
+                    </ul>
+                </nav>
+                <div class="card__items">
+                    <div class="card__item">
+                        <h1>Cyberpunk 2077: The Movie</h1>
+                        <div class="card-caption">
+                            <ul>
+                                <li>Video</li>
+                                <li><a href="#!">2023</a></li>
+                                <li><span>1h</span><span>21m</span></li>
+                            </ul>
+                        </div>
+                        <div class="card__item-body">
+
+                            <div class="card__img">
+                                <img class="card__main-img" src="./img/card-img.jpg" alt="card-img">
+
+                                <div class="card__decores">
+                                    <img class="card__decore" src="./img/card-icon.svg" alt="card-decore">
+                                    <img class="card__plus" src="./img/card-plus.svg" alt="card-plus">
+                                </div>
+                            </div>
+                            <div class="card__item-descr">
+                                <div class="card__genre">
+                                    <a href="#!"><span>Action</span></a>
+                                    <a href="#!"><span>Adventure</span></a>
+                                    <a href="#!"><span>Animation</span></a>
+                                    <a href="#!"><span>Sci-Fi</span></a>
+                                    <a href="#!"><span>Thriller</span></a>
+                                </div>
+                                <p class="card__descr">The film is a summary of the main plot of the game "Cyberpunk
+                                    2077". A
+                                    full-fledged
+                                    animated production set in the game world.</p>
+                                <ul class="card__info">
+                                    <li>
+                                        <span>Director</span>
+                                        <ul class="card__info-item">
+                                            <li><a href="#!">Jack Hunt</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span>Writers</span>
+                                        <ul class="card__info-item">
+                                            <li><a href="#!">Marcin Blacha</a></li>
+                                            <li><a href="#!">Dariusz Bochenek</a></li>
+                                            <li><a href="#!">Pawel Ciemniewski</a></li>
+                                        </ul>
+                                        <div class="writers__arrow">
+                                            <img src="./img/arrow-right-w.svg" alt="arrow-r">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Stars</span>
+                                        <ul class="card__info-item">
+                                            <li><a href="#!">Jason Hightower</a></li>
+                                            <li><a href="#!">Cherami Leigh</a></li>
+                                            <li><a href="#!">Gregory Michael</a></li>
+                                        </ul>
+                                        <div class="writers__arrow">
+                                            <img src="./img/arrow-right-w.svg" alt="arrow-r">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="writers-img">
+                                            <a href="#!"> <img src="./img/logo-2.svg" alt="logo-img"></a>
+                                        </div>
+                                        <ul class="card__info-item">
+                                            <li class="card__production">
+                                                <a href="#!">
+                                                    See production info at IMDbPro
+                                                    <img src="./img/go-to.svg" alt="to-go">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card__item">
+
+                        <div class="rating">
+                            <div class="rating__item">
+                                <div class="rating__item-title">IMDb RATING</div>
+                                <div class="rating__item-inner">
+                                    <img src="./img/star-yellow.svg" alt="star-yellow">
+                                    <div class="rating__item-body">
+                                        <div class="rating__item-rate">
+                                            <span class="rate-one">7.6</span>
+                                            <span>/</span>
+                                            <span class="rate-two">10</span>
+                                        </div>
+                                        <span class="rate-three">48</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rating__item">
+                                <div class="rating__item-title">YOUR RATING</div>
+                                <div class="rating__item-rate rate">
+                                    <img src="./img/star.svg" alt="star-yellow">
+                                    <span class="rating__rate">Rate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="watchlist">
+                            <button class="watchlist__btn" aria-label="Add to watchlist">
+                                <span class="watchlist__inner">
+                                    <img src="./img/watchlist-plus.svg" alt="plus">
+                                    <span>Add to Watchlist</span>
+                                </span>
+                                <div class="watchlist__arrow">
+                                    <img src="./img/watchlist-arrow-down.svg" alt="arrow-down">
+                                </div>
+                            </button>
+                            <div class="watchlist__review">
+                                <span>1</span>
+                                <a href="#!">
+                                    <span>User review</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
