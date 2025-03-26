@@ -101,8 +101,9 @@ if (markBMI2 > johnBMI2) {
 // Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123 
 // Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
-//average score
 
+
+//average score
 function calcAverage(score1, score2, score3) {
     return (score1 + score2 + score3) / 3;
 }
