@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script defer src="./js/app.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <span class="decore-1"></span>
+    <span class="decore-2"></span>
+    <span class="decore-3"></span>
+    <span class="decore-4"></span>
+    <div class="box">
+        <div class="container">
+            <div class="box__logo">
+                <img src="./img/logo.svg" alt="logo">
+            </div>
+            <div class="box__inner">
+                <form class="form">
+
+
+                    <div class="form__login form__input">
+                        <label for="usrname">
+                            <img src="./img/user.svg" alt="usename">
+                        </label>
+                        <input id="usrname" class="form__user" type="text" placeholder="Username">
+                    </div>
+
+                    <div class="form__creditial form__input">
+                        <label for="pwd">
+                            <img src="./img/lock.svg" alt="password">
+                        </label>
+                        <input id="pwd" class="form__password" type="password" placeholder="password">
+                    </div>
+                    <span class="result"></span>
+
+                    <button type="submit">login</button>
+                    <a class="pass__recovery" href="#!">Forgot password?</a>
+                </form>
+                <div class="box__tasks">
+                    <textarea disabled>
+Welcome, User001!
+You have been assigned a highly classified mission: hack into the Pentagon’s database to gain access to the system.
+To accomplish this, you must complete two JavaScript challenges.
+
+Mission Briefing 🕵️‍♂️
+You have two objects—one contains the encoded login, and the other holds the password.
+However, the keys in these objects are scrambled.
+Your task is to sort the keys in ascending order and extract the correct values to reveal the login and password.
+If you succeed, you will unlock access to the system.
+Use the following object to retrieve the login:
+
+const loginCode = {
+    117: 's',
+    115: 'l',
+    118: 'r',
+    112: 'i',
+    120: 'h',
+    113: 'm',
+    119: 'a',
+    114: 'u',
+    111: 't',
+    116: 'a'
+};
+
+
+Challenge 2: Decode the Password
+Use the following object to retrieve the password:
+
+const passwordCode = {
+    106: 'o',
+    102: 'o',
+    103: 'o',
+    110: 'o',
+    104: 'h',
+    105: 'o',
+    111: 'l',
+    107: 's',
+    101: 'v',
+    109: 'p',
+    100: 'z',
+    108: 'y'
+};
+                </textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

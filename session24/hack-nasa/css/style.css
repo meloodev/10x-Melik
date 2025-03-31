@@ -1,0 +1,258 @@
+@import url(./null.css);
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #2148C0;
+    padding-top: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.decore-1::after {
+    content: '';
+    position: absolute;
+    background: url(../img/decore-1.svg) top right no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    background-size: contain;
+}
+
+.decore-2::before {
+    content: '';
+    position: absolute;
+    background: url(../img/decore-2.svg) bottom left no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+.decore-3::before {
+    content: '';
+    position: absolute;
+    background: url(../img/decore-3.svg) bottom left no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+.decore-4::before {
+    content: '';
+    position: absolute;
+    background: url(../img/decore-4.svg) bottom left no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+
+
+
+.container {
+    max-width: 788px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.box {
+    height: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+
+
+form {
+    min-width: 320px;
+}
+
+
+.box__logo {
+
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.box__logo img {
+    width: 120px;
+    height: 99px;
+}
+
+
+.form input {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    /* text-transform: uppercase; */
+    color: #FFFFFF;
+    padding: 13px 0px 13px 51px;
+    width: 100%;
+    background-color: transparent;
+    font-weight: 500;
+    border: 2px solid #FFFFFF32;
+    border-radius: 4px;
+}
+
+.form input::placeholder {
+    color: #FFFFFF;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+form .form__input {
+    position: relative;
+}
+
+form .form__input label img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.form__login {
+    margin-bottom: 20px;
+}
+
+/* .form__creditial {
+    margin-bottom: 43px;
+} */
+
+form button[type=submit] {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    width: 100%;
+
+
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2148C0;
+    padding: 13px 0;
+    cursor: pointer;
+    margin-bottom: 11px;
+}
+
+form button[type=submit]:active {
+    scale: .99;
+}
+
+form .pass__recovery {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+
+}
+
+.box__inner {
+    display: flex;
+    gap: 20px;
+}
+
+.box__tasks {
+    width: 100%;
+}
+
+
+.box__tasks textarea {
+
+    resize: vertical;
+    background: transparent;
+    border-radius: 8px;
+    border: 2px solid #ffffff32;
+    padding: 10px 5px;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    user-select: none;
+    min-height: 234px;
+}
+
+/* ///////// */
+textarea::-webkit-scrollbar {
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #c6c6c6;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+/* ///////// */
+
+.box__tasks textarea::selection {
+    background: transparent;
+    color: inherit;
+}
+
+form .result {
+    display: block;
+    height: 60px;
+    text-align: center;
+    font-weight: 600;
+    color: tomato;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* form .result span {
+    display: none;
+} */
+
+
+@media (max-width: 768px) {
+    .box__inner {
+        display: block;
+    }
+
+    form .pass__recovery {
+        margin-bottom: 40px;
+    }
+
+    body {
+        padding-top: 30px;
+    }
+
+    .decore-1::after {
+        width: 60%;
+    }
+
+    .decore-2::before,
+    .decore-3::before,
+    .decore-4::before {
+        bottom: -15%;
+
+    }
+
+    form {
+        min-width: 100%;
+    }
+}
