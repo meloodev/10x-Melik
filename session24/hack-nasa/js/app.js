@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let login = '';
     let password = '';
 
-    const idOne = '166-161-167-201-147-211-152-154-164-228';
-    const idTwo = '98-102-138-200-100-194-110-112-112-214-216-154-98-104-106';
+    const idOne = '166-161-167-181-135-198-152-170-113-159-205-175-157-173';
+    const idTwo = '98-102-138-200-166-194-110-112-112-214-216-154-98-104-106';
 
 
     const btn = document.querySelector('.form button');
