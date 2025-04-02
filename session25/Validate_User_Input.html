@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4: Validate User Input (Do...While Loop)</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Write a function getValidInput() that repeatedly asks the user for a number between 1 and 10 using prompt(). The function should only stop when a valid input is given.
+        */
+        function getValidInput() {
+            let num;
+            do {
+                num = prompt("Enter a number between 1 and 10:");
+                num = Number(num);
+            } while (isNaN(num) || num < 1 || num > 10);
+
+            console.log(`Valid input received: ${num}`);
+            return num;
+        }
+
+        getValidInput();
+    </script>
+
+</body>
+
+</html>
