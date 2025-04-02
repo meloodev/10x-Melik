@@ -180,7 +180,7 @@ form .pass__recovery {
 
 .box__tasks textarea {
 
-    resize: vertical;
+    resize: none;
     background: transparent;
     border-radius: 8px;
     border: 2px solid #ffffff32;
