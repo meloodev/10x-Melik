@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case #1: The Hidden Message</title>
+</head>
+
+<body>
+
+<!-- Scenario: A crucial message was hidden in a webpage by Agent X before they disappeared. The message is stored in an invisible element.
+Task:
+- Select an element with ID 'hidden-message' using getElementById
+- Make it visible by changing its style properties
+- Read and decode the message (reverse the text) using string manipulation
+- Display the decoded message in another element with ID 'decoded-message' -->
+
+    <p id="hidden-message" style="display: none;">!egassem terces a si sihT</p>
+    <p>Decoded Message: <span id="decoded-message"></span></p>
+    <button onclick="revealMessage()">Reveal Message</button>
+
+    <script>
+        function revealMessage() {
+            const decodedMessage = document.getElementById('decoded-message');
+            const hiddenMessage = document.getElementById('hidden-message');
+
+            const hiddenText = hiddenMessage.textContent;
+            const text = [...hiddenText].reverse().join('');
+            decodedMessage.textContent = text;
+            hiddenMessage.style.display = 'block';
+          
+        }
+
+    </script>
+
+</body>
+
+</html>

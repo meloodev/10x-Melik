@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case #6: The Code Breaker</title>
+</head>
+
+<body>
+    <!-- Scenario: You've found an encrypted message system that requires DOM manipulation to decode.
+Task:
+- Create an interactive decryption interface with draggable elements
+- Select and rearrange elements with specific classes to form the correct pattern
+- Use event listeners to detect when elements are in the correct positions
+- When the pattern is complete, reveal a hidden message by dynamically updating DOM content
+- Add visual feedback using style manipulation as users get closer to the solution -->
+
+    <style>
+        #code-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .draggable {
+            padding: 10px;
+            font-size: 24px;
+            cursor: grab;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            user-select: none;
+            background-color: white;
+        }
+
+        .drag-over {
+            border-color: green;
+        }
+
+        .draggable {
+            touch-action: none;
+            /* блокируем скролл во время перетаскивания */
+        }
+    </style>
+
+
+
+    <div id="code-container">
+        <div class="draggable" draggable="true">🔑</div>
+        <div class="draggable" draggable="true">🔒</div>
+        <div class="draggable" draggable="true">📜</div>
+    </div>
+
+    <p id="decoded-text"></p>
+
+    <script>
+        const container = document.getElementById('code-container');
+        const decodedText = document.getElementById('decoded-text');
+
+        let draggedElement = null;
+        let touchStartElement = null;
+        let draggedClone = null;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        // Для мыши
+        container.addEventListener('dragstart', (e) => {
+            if (e.target.classList.contains('draggable')) {
+                draggedElement = e.target;
+                const rect = draggedElement.getBoundingClientRect();
+                offsetX = e.clientX - rect.left; // Сдвиг по X
+                offsetY = e.clientY - rect.top;  // Сдвиг по Y
+            }
+        });
+
+        container.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            const target = e.target.closest('.draggable');
+            if (target && target !== draggedElement) {
+                target.classList.add('drag-over');
+            }
+        });
+
+        container.addEventListener('dragleave', (e) => {
+            const target = e.target.closest('.draggable');
+            if (target) {
+                target.classList.remove('drag-over');
+            }
+        });
+
+        container.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const target = e.target.closest('.draggable');
+            if (target && draggedElement) {
+                target.classList.remove('drag-over');
+                swapElements(draggedElement, target);
+                checkOrder();
+            }
+        });
+
+        // Для пальца (мобильные)
+        container.addEventListener('touchstart', (e) => {
+            const touchTarget = e.target.closest('.draggable');
+            if (touchTarget) {
+                touchStartElement = touchTarget;
+
+                // Создаём клон для визуального перетаскивания
+                draggedClone = touchTarget.cloneNode(true);
+                const rect = touchTarget.getBoundingClientRect();
+                offsetX = e.touches[0].clientX - rect.left; // Сдвиг по X
+                offsetY = e.touches[0].clientY - rect.top;  // Сдвиг по Y
+
+                draggedClone.style.position = 'absolute';
+                draggedClone.style.pointerEvents = 'none';
+                draggedClone.style.opacity = '0.7';
+                draggedClone.style.zIndex = '1000';
+                draggedClone.style.left = `${e.touches[0].clientX - offsetX}px`;
+                draggedClone.style.top = `${e.touches[0].clientY - offsetY}px`;
+                draggedClone.style.transform = 'scale(1.1)';
+                document.body.appendChild(draggedClone);
+            }
+        });
+
+        container.addEventListener('touchmove', (e) => {
+            if (draggedClone) {
+                const touch = e.touches[0];
+                draggedClone.style.left = `${touch.clientX - offsetX}px`;
+                draggedClone.style.top = `${touch.clientY - offsetY}px`;
+
+                const element = document.elementFromPoint(touch.clientX, touch.clientY);
+                const target = element?.closest('.draggable');
+
+                Array.from(container.children).forEach(child => child.classList.remove('drag-over'));
+
+                if (target && target !== touchStartElement) {
+                    target.classList.add('drag-over');
+                }
+            }
+        });
+
+        container.addEventListener('touchend', (e) => {
+            if (draggedClone) {
+                draggedClone.remove();
+                draggedClone = null;
+            }
+
+            const touch = e.changedTouches[0];
+            const dropTarget = document.elementFromPoint(touch.clientX, touch.clientY);
+            const target = dropTarget?.closest('.draggable');
+
+            Array.from(container.children).forEach(child => child.classList.remove('drag-over'));
+
+            if (touchStartElement && target && container.contains(target)) {
+                swapElements(touchStartElement, target);
+                checkOrder();
+            }
+            touchStartElement = null;
+        });
+
+        // Вспомогательная функция замены мест
+        function swapElements(a, b) {
+            const draggedIndex = Array.from(container.children).indexOf(a);
+            const targetIndex = Array.from(container.children).indexOf(b);
+
+            if (draggedIndex < targetIndex) {
+                container.insertBefore(a, b.nextSibling);
+            } else {
+                container.insertBefore(a, b);
+            }
+        }
+
+        function checkOrder() {
+            const currentOrder = Array.from(container.children).map(el => el.textContent).join('');
+            console.log(currentOrder);
+
+            if (currentOrder === '🔒🔑📜') {
+                decodedText.textContent = '🎉 Message Decoded: "Access Granted!"';
+                decodedText.style.color = 'green';
+                decodedText.style.transition = 'opacity 0.5s';
+                decodedText.style.opacity = '1';
+            } else {
+                decodedText.textContent = '';
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

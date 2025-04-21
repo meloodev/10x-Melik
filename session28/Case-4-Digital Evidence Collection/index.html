@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case #4: Digital Evidence Collection</title>
+</head>
+
+<body>
+    <!-- Scenario: You need to collect digital evidence scattered throughout a webpage.
+    Task:
+    - Use querySelectorAll to select all elements with the attribute data-evidence='true'
+    - For each piece of evidence, create a new list item in an 'evidence-log' unordered list
+    - Add an event that lets you mark evidence as 'collected' when clicked
+    - Update a counter showing how many pieces of evidence remain -->
+
+    <ul id="evidence-log"></ul>
+    <p>Evidence Remaining: <span id="evidence-count">0</span></p>
+    <div data-evidence="true">USB Drive</div>
+    <div data-evidence="true">Hacked File</div>
+    <div data-evidence="true">Suspicious Email</div>
+
+    <script>
+        const scattered = document.querySelectorAll("[data-evidence='true']");
+        const evidence = document.getElementById('evidence-log');
+        const count = document.getElementById('evidence-count');
+
+        scattered.forEach((item) => {
+            const text = item.textContent;
+            const el = document.createElement('li');
+            el.textContent = text;
+            evidence.appendChild(el);
+
+        });
+
+        evidence.addEventListener('click', () => {
+            count.textContent = scattered.length;
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

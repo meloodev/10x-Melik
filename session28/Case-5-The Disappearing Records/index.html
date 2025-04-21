@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Case #5: The Disappearing Records</title>
+</head>
+
+<body>
+
+    <!-- Scenario: A hacker is deleting important information from a database interface. You need to create a system to monitor and recover the data.
+Task:
+- Create a form that allows adding new data entries to a table
+- Implement 'delete' buttons for each entry that remove them from the DOM
+- Create an 'audit log' that records each addition and deletion action
+- Add a 'recover' feature that can restore accidentally deleted entries
+- Use event delegation for efficiently handling all delete/recover actions -->
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Data Entry</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="records">
+                <tr>
+                    <td data-id="1">Classified Info1</td>
+                    <td><button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td data-id="2">Classified Info2</td>
+                    <td><button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td data-id="3">Classified Info3</td>
+                    <td><button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td data-id="4">Classified Info4</td>
+                    <td><button>Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="recovery">Recover Last Deleted</button>
+        <ul id="audit-log"></ul>
+    </div>
+
+</body>
+
+<script>
+    const records = document.getElementById('records');
+    const auditLog = document.getElementById('audit-log');
+
+    const recovery = document.getElementById('recovery');
+
+    let deletedStack = [];
+
+    records.addEventListener('click', (e) => {
+        const target = e.target;
+        const row = target.closest('tr');
+        if (row) {
+            const data = row.querySelector('[data-id]');
+            const btn = row.querySelector('button');
+            if (target.tagName === 'BUTTON') {
+                const obj = {};
+
+                obj.id = data.getAttribute('data-id');
+                obj.date = new Date().toLocaleTimeString();
+                obj.text = data.textContent;
+                deletedStack.push(obj);
+                row.remove();
+
+                logAction(obj.date, obj.text);
+                console.log(deletedStack);
+            }
+        }
+
+    });
+
+    recovery.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (deletedStack.length === 0) {
+            alert('No entries');
+            return;
+        }
+
+        const rec = deletedStack.pop();
+        const recoveryDate = new Date().toLocaleTimeString(); 
+        logAction(recoveryDate, rec.text, 'recovered');
+
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td data-id=${rec.id}>${rec.text}</td>
+            <td><button>Delete</button></td>
+        `;
+        records.appendChild(newRow);
+        console.log(deletedStack);
+
+
+    });
+
+
+    function logAction(date, message, status = 'removed') {
+        const li = document.createElement('li');
+        li.textContent = `${date}: ${status} ${message}`;
+        auditLog.appendChild(li);
+    }
+
+
+</script>
+
+</html>
