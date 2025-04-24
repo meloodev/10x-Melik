@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case #7: Security Lock Bypass</title>
+</head>
+
+<body>
+    <!-- Scenario: You're locked out of a critical system and need to bypass a security interface.
+
+    Task:
+    - Create a sequence of interactive elements that must be activated in a specific order
+    - Use event listeners to track user interactions
+    - Dynamically create feedback elements showing progress
+    - If the wrong sequence is entered, elements reset with animation
+    - When the correct sequence is entered, replace the entire interface with a 'Success' message -->
+
+    <div class="cover">
+        <div id="lock-panel">
+            <button class="lock-button" data-id="1"></button>
+            <button class="lock-button" data-id="2"></button>
+            <button class="lock-button" data-id="3"></button>
+        </div>
+    </div>
+
+    <p id="lock-status">Enter Code</p>
+
+
+    <style>
+        .cover {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 10px 0px 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #lock-panel {
+            display: flex;
+            gap: 15px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: #d2d2d2;
+            border-radius: 4px;
+            transition: background-color .3s ease-in-out;
+            cursor: pointer;
+        }
+
+
+        button:hover {
+            background-color: #b4b4b4;
+        }
+
+        #lock-status {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 500;
+        }
+
+        .lock-button.err {
+            animation: shake .2s;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0px);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+    </style>
+
+    <script>
+        const btns = document.querySelectorAll('#lock-panel button');
+        const lockStatus = document.getElementById('lock-status');
+        const lockPanel = document.getElementById('lock-panel');
+
+        const passArr = [2, 0, 1];
+        let arr = [];
+
+        function shake(btns) {
+            btns.forEach((el) => {
+                el.classList.add('err');
+
+                setTimeout(() => {
+                    el.classList.remove('err');
+                }, 100);
+            });
+        }
+
+        let k = 0;
+        btns.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                arr.push(i);
+
+                if (arr.length > 0) {
+
+                    if (arr[arr.length - 1] === passArr[k]) {
+                        item.style = 'background-color: green';
+                        setTimeout(() => {
+                            item.style = 'background-color: #d2d2d2';
+                        }, 300);
+                        k++;
+                        //console.log(arr.length);
+                    } else {
+                        shake(btns);
+                        arr.pop();
+                        arr = [];
+                        k = 0;
+                        lockStatus.textContent = 'Wrong Code! Try Again.';
+                    }
+
+                    if (arr.length === 3) {
+                        arr = [];
+                        k = 0;
+                        lockStatus.textContent = '';
+                        lockPanel.style.color = 'green';
+                        lockPanel.innerHTML = '<h2>Access Granted!</h2>';
+
+                    }
+                }
+
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

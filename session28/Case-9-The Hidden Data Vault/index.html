@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case #9: The Hidden Data Vault</title>
+</head>
+
+<body>
+
+    <!-- Scenario: A sophisticated system is hiding data inside seemingly ordinary web elements.
+Task:
+Traverse the entire DOM to find elements containing hidden data attributes.
+Extract and organize the data into a readable format.
+Display the extracted data in a dynamic dashboard.
+Allow users to search for specific data patterns and highlight matches. -->
+
+    <div class="data-container">
+        <p data-hidden="agent-X">🔍 Hidden Data #1</p>
+        <p>Regular Content</p>
+        <p data-hidden="mission-42">🔍 Hidden Data #2</p>
+    </div>
+    <button onclick="extractHiddenData()">Extract Data</button>
+    <ul id="data-list"></ul>
+
+    <style>
+      
+
+        li {
+            list-style: none;
+        }
+
+
+    </style>
+
+    <script>
+        function extractHiddenData() {
+            const hiddenElems = document.querySelectorAll('.data-container p[data-hidden]');
+            const dataList = document.getElementById('data-list');
+
+
+            hiddenElems.forEach((item) => {
+                dataList.insertAdjacentHTML('beforeend', `
+                <li>hidden-data: ${item.getAttribute('data-hidden')}</li>
+                `);
+            });
+ 
+        }
+    </script>
+
+
+</body>
+
+</html>

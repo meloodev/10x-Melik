@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case #8: The Shadow Network</title>
+</head>
+
+<body>
+    <!-- Scenario: You've discovered a hidden communication network embedded within a seemingly innocent webpage.
+Task:
+- Traverse the DOM to find elements with specific nested relationships
+- Identify elements where the 3rd child of a parent with class 'network-node' contains a data attribute
+- Extract and combine these hidden data pieces from throughout the DOM tree
+- Create a new interface revealing the combined information
+- Implement an 'alert system' that monitors for DOM changes that might indicate tampering -->
+
+    <style>
+        .network-node p[data-message] {
+            color: green;
+        }
+    </style>
+
+    <div class="network-node">
+        <p>Normal Text</p>
+        <p>Another Element</p>
+        <p data-message="Alpha">Secret Data</p>
+    </div>
+    <div class="network-node">
+        <p>Random Info</p>
+        <p>More Text</p>
+        <p data-message="Bravo">Hidden Message</p>
+    </div>
+
+    <p>Decoded Transmission: <span id="decoded-transmission"></span></p>
+
+    <script>
+        function decodeMess() {
+            const elem = document.querySelectorAll('.network-node');
+            let mess = [];
+            elem.forEach((item) => {
+                const child = item.children[2];
+                if (child && child.dataset.message) {
+                    mess.push(child.dataset.message);
+                }
+            });
+
+
+            const output = document.getElementById('decoded-transmission');
+            output.textContent = mess.join(' ');
+        }
+
+        decodeMess();
+
+
+        const observer = new MutationObserver(mutations => {
+            console.log(mutations);
+            decodeMess();
+        });
+
+        document.querySelectorAll('.network-node').forEach(node => {
+            observer.observe(node, {
+                childList: true,   
+                attributes: true,  
+                subtree: true,    
+                attributeFilter: ['data-message']
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
