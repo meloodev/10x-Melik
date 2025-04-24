@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. E-Commerce Product Management System</title>
+</head>
+
+<body>
+    <!-- Scenario: You are developing a backend system for an e-commerce platform. Products should have basic details and additional rules for electronics.
+✅ Tasks:
+Create an ECommerceProduct class with properties name, price, and category.
+Implement methods for applying a discount and checking stock availability.
+Extend it into ElectronicsProduct with a warrantyPeriod property and override a method to apply additional electronics-specific discounts. -->
+
+
+    <script>
+        class ECommerceProduct {
+            constructor(name, price, category, stock) {
+                this.name = name;
+                this.price = price;
+                this.category = category;
+                this.stock = stock;
+            }
+
+            applyDiscount(discountPercent) {
+                const discount = (this.price * discountPercent) / 100;
+                this.price -= discount;
+                console.log(`Discount applied: ${discountPercent}%. New price: $${this.price.toFixed(2)}`);
+            }
+
+            isInStock() {
+                return this.stock > 0;
+            }
+        }
+
+
+        class ElectronicsProduct extends ECommerceProduct {
+            constructor(name, price, stock, warrantyPeriod) {
+                super(name, price, "electronics", stock);
+                this.warrantyPeriod = warrantyPeriod;
+            }
+
+            applyDiscount(discountPercent) {
+                const extraDiscount = 5;
+                const totalDiscount = discountPercent + extraDiscount;
+                super.applyDiscount(totalDiscount);
+                console.log(`Additional discount ${extraDiscount}% for electronics.`);
+            }
+        }
+
+        const phone = new ElectronicsProduct("Smartphone", 999.99, 10, 24);
+        console.log(`In stock: ${phone.isInStock() ? "yes" : "no"}`);
+
+        phone.applyDiscount(10);  // Applies 15% discount
+        console.log(`Guarantee: ${phone.warrantyPeriod} months`);
+
+    </script>
+
+</body>
+
+</html>

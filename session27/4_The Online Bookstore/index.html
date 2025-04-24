@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. The Online Bookstore</title>
+</head>
+
+<body>
+
+    <!-- Scenario: You are working on an online bookstore system. Your first task is to create a blueprint for storing book details using constructor functions.
+✅ Tasks:
+Create a constructor function Book that takes title, author, and year as parameters.
+Instantiate two books using this constructor and log their details to the console. -->
+
+
+    <script>
+        function Book(title, author, year) {
+            this.title = title;
+            this.author = author;
+            this.year = year;
+
+        }
+
+        const book1 = new Book("1984", "George Orwell", 1949);
+        const book2 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
+
+
+
+
+        console.log(book1);
+        console.log(book2);
+
+
+
+        Book.prototype.getDetails = function () {
+            return `${this.title} by ${this.author}, published in ${this.year}`;
+        };
+
+        console.log(book1.getDetails());
+        console.log(book2.getDetails()); 
+    </script>
+
+
+
+
+</body>
+
+</html>

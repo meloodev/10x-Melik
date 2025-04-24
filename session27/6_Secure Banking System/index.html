@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Secure Banking System</title>
+</head>
+
+<body>
+
+    <!-- Scenario: You have been hired by a bank to create a secure online banking system. Customers should not be able to directly access their account balance but can deposit, withdraw, and check their balance through methods.
+    ✅ Tasks:
+    Create a class BankAccount with a private property #balance.
+    Implement methods deposit(amount), withdraw(amount), and getBalance().
+    Ensure balance can't be accessed directly but can be checked using getBalance(). -->
+
+
+    <script>
+        class BankAccount {
+            #balance;
+
+            constructor(initialBalance) {
+                this.#balance = initialBalance;
+            }
+
+            deposit(amount) {
+                if (amount > 0) {
+                    this.#balance += amount;
+                } else {
+                    console.log("Deposit amount must be positive");
+                }
+            }
+
+            withdraw(amount) {
+                if (amount > 0 && amount <= this.#balance) {
+                    this.#balance -= amount;
+                } else {
+                    console.log("Invalid withdrawal amount");
+                }
+            }
+
+            getBalance() {
+                return this.#balance;
+            }
+        }
+
+     
+        const myAccount = new BankAccount(500);
+
+        myAccount.deposit(200);
+        myAccount.withdraw(100);
+        console.log(myAccount.getBalance()); 
+
+    </script>
+
+
+</body>
+
+</html>

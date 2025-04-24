@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. Shape Calculator for Architects</title>
+</head>
+
+<body>
+
+    <!-- Scenario: A group of architects wants a simple way to calculate areas for different shapes. You need to create a flexible shape calculator that supports different geometries.
+✅ Tasks:
+Create a Shape class with a method getArea().
+Extend it into Circle and Rectangle classes, overriding getArea() for each shape.
+Create instances and call getArea(). -->
+
+    <script>
+        //base
+        class Shape {
+            getArea() {
+                throw new Error("err");
+            }
+        }
+
+
+        class Circle extends Shape {
+            constructor(radius) {
+                super();
+                this.radius = radius;
+            }
+
+            getArea() {
+                return Math.PI * this.radius ** 2;
+            }
+        }
+
+        class Rectangle extends Shape {
+            constructor(width, height) {
+                super();
+                this.width = width;
+                this.height = height;
+            }
+
+            getArea() {
+                return this.width * this.height;
+            }
+        }
+
+        const circle = new Circle(5);
+        console.log("Circle area:", circle.getArea().toFixed(2)); 
+
+        const rectangle = new Rectangle(4, 7);
+        console.log("Rectangle area:", rectangle.getArea()); 
+
+    </script>
+
+</body>
+
+</html>

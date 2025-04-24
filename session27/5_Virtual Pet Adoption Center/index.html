@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Virtual Pet Adoption Center</title>
+</head>
+
+<body>
+
+
+    <!-- Scenario: You are developing a virtual pet adoption website where users can adopt different animals. You need to create a class for animals and allow users to see some basic details about their chosen pet.
+✅ Tasks:
+Create a class Animal with a constructor that takes name and species (e.g., "Buddy", "Dog").
+Add a method makeSound() that logs "Animal sound" by default.
+Create an instance of the class and call the method. -->
+
+
+
+    <script>
+        class Animal {
+            constructor(name, species, sound) {
+                this.name = name;
+                this.species = species;
+                this.sound = sound;
+            }
+
+             makeSound() {
+                console.log(this.sound);
+            }
+        }
+
+    
+        const pet = new Animal("Buddy", "Dog", 'rr');
+        const pet1 = new Animal("Buddy", "Dog", 'rr2');
+
+     
+        pet.makeSound(); 
+        pet1.makeSound(); 
+    </script>
+
+
+</body>
+
+</html>

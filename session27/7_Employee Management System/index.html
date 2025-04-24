@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7. Employee Management System</title>
+</head>
+
+<body>
+
+    <!-- Scenario: A company wants to create an employee management system where managers have additional responsibilities compared to regular employees.
+    ✅ Tasks:
+    Create a class Employee with properties name and salary.
+    Extend it into a Manager class, adding an extra property department.
+    Override a method getDetails() in Manager to include department info. -->
+
+
+    <script>
+        class Employee {
+            constructor(name, salary) {
+                this.name = name;
+                this.salary = salary;
+            }
+
+            getDetails() {
+                return `${this.name} earns $${this.salary}`;
+            }
+        }
+
+        class Manager extends Employee {
+            constructor(name, salary, department) {
+                super(name, salary); 
+                this.department = department;
+            }
+
+            getDetails() {
+                return `${this.name} earns $${this.salary} and manages the ${this.department} department`;
+            }
+        }
+
+
+        const employee = new Employee("Alice", 50000);
+        console.log(employee.getDetails());
+
+
+        const manager = new Manager("Bob", 80000, "Sales");
+        console.log(manager.getDetails());
+
+
+    </script>
+
+
+</body>
+
+</html>

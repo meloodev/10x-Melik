@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8. Vintage Car Age Calculator</title>
+</head>
+
+<body>
+
+    <!-- Scenario: A vintage car enthusiast wants a simple way to check how old their cars are. Your job is to create a system where car age can be calculated dynamically.
+✅ Tasks:
+Create a constructor function Car with properties brand and year.
+Add a method age() using Car.prototype that calculates the car’s age from the current year.
+Create instances and test them. -->
+
+
+    <script>
+
+        function Car(brand, year) {
+            this.brand = brand;
+            this.year = year;
+        }
+
+
+        Car.prototype.age = function () {
+            const currentYear = new Date().getFullYear();
+            return currentYear - this.year;
+        };
+
+
+        const car1 = new Car("Toyota", 2005);
+        const car2 = new Car("Ford", 2015);
+
+
+        console.log(`${car1.brand} is ${car1.age()} years old.`);
+        console.log(`${car2.brand} is ${car2.age()} years old.`);
+
+    </script>
+
+
+
+</body>
+
+</html>

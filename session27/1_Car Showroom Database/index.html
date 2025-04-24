@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1_Car Showroom Database</title>
+</head>
+
+<body>
+    <!-- Scenario: You have just started working at a car dealership, and your boss wants you to create a simple database for cars. Your task is to create an object representing a car.
+✅ Tasks:
+Create an object car with properties: brand, model, and year.
+Add a method getInfo that returns a string with the car’s details (e.g., "Toyota Corolla, 2022").
+Access, modify, and delete a property, then log the object to see the changes. -->
+
+
+    <script>
+        const car = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2022,
+
+            func: function dd() {
+                return `${this.brand} ${this.model}, ${this.year ? this.year : 'year not exist'}`;
+            }
+        };
+
+        console.log(car.brand);
+
+        car.model = "Camry";
+
+        delete car.year;
+
+        console.log(car);
+        console.log(car.func());
+    </script>
+
+</body>
+
+</html>
