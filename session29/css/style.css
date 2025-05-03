@@ -58,7 +58,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 60px;
 }
 
@@ -215,6 +215,7 @@ h1 {
     flex-direction: column;
     gap: 60px;
     align-items: center;
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 640px) {
