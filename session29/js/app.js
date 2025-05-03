@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const min = 1;
-    const max = 5;
+    const max = 20;
 
-    let limit = 10;
+    let limit = 20;
 
 
     let reset = limit;
