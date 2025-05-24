@@ -1,0 +1,38 @@
+@mixin flex($df, $jc, $ai) {
+
+    @if $df {
+        display: $df;
+    }
+
+    @if $jc {
+        justify-content: $jc;
+    }
+
+    @if $ai {
+        align-items: $ai;
+    }
+}
+
+
+@mixin fontsSize($fw, $fs, $lh, $color, $mb) {
+    @if $fw {
+        font-weight: $fw;
+    }
+
+    @if $fs {
+        font-size: $fs;
+    }
+
+    @if $lh {
+        line-height: $lh;
+    }
+
+    @if $color {
+        color: $color;
+    }
+
+    @if $mb {
+        margin-bottom: $mb;
+    }
+
+}
