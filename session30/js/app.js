@@ -7,9 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let pagination = 20;
     let currentIndex = 0;
     let filter = false;
+    let loading = false;
 
 
     async function getData() {
+        render([]);
         try {
             const response = await fetch('https://restcountries.com/v3.1/all');
 
@@ -32,6 +34,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function render(countries) {
         let dataHtml = '';
+        if (!countries || countries.length === 0) {
+            for (let i = 0; i < 20; i++) {
+                dataHtml += `
+                <div class="cards__item">
+                    <div class="cards__item-flag-wrap">
+                        <div class="skeleton skeleton-flag"></div>
+                    </div>
+                    <div class="cards__item-descr">
+                        <h2 class="skeleton skeleton-title"></h2>
+                        <ul>
+                            <li><div class="skeleton skeleton-line"></div></li>
+                            <li><div class="skeleton skeleton-line"></div></li>
+                            <li><div class="skeleton skeleton-line"></div></li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+            }
+
+            cardItems.innerHTML = dataHtml;
+            return;
+        }
         countries.forEach((item) => {
             let country = item?.name?.common ? item.name.common : '';
             let googleMapsLink = item?.maps?.googleMaps ? item.maps.googleMaps : '';
@@ -60,9 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 inl = 'style="object-position: left;"';
             }
 
-            
 
-            
+
+
 
             dataHtml += `
                         <div class="cards__item">
@@ -119,22 +143,28 @@ document.addEventListener('DOMContentLoaded', () => {
     getData().then(data => {
         allCountries = data;
         currentIndex = pagination;
+        cardItems.innerHTML = '';
         render(allCountries.slice(0, pagination));
     });
 
+
+
     window.addEventListener('scroll', () => {
-        if (filter) return;
+        if (loading || filter) return;
         const scrollTop = window.scrollY;
         const windowHeight = window.innerHeight;
         const fullHeight = document.documentElement.scrollHeight;
 
         if (scrollTop + windowHeight >= fullHeight - 150) {
             if (currentIndex < allCountries.length) {
+                loading = true;
                 const nextBatch = allCountries.slice(currentIndex, currentIndex + pagination);
                 render(nextBatch);
                 currentIndex += pagination;
+                setTimeout(() => {
+                    loading = false;
+                }, 300);
             }
         }
     });
-
 });  
