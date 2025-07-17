@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function getData() {
         render([]);
         try {
-            const response = await fetch('https://restcountries.com/v3.1/all');
+            const response = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,flags,population,region');
 
             if (!response.ok) {
                 throw new Error('Error fetching data');
