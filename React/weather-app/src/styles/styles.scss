@@ -1,0 +1,48 @@
+@mixin flex($df, $jc, $ai, $fd, $gap) {
+    @if $df !=null {
+        display: $df;
+    }
+
+    @if $jc !=null {
+        justify-content: $jc;
+    }
+
+    @if $ai !=null {
+        align-items: $ai;
+    }
+
+    @if $fd !=null {
+        flex-direction: $fd;
+    }
+
+    @if $gap !=null {
+        gap: $gap
+    }
+}
+
+
+$montserrat: 'Montserrat', sans-serif;
+$inter: "Inter", sans-serif;
+
+$shadow: 0px 20px 25px -5px rgba(229, 231, 235, 0.5), 0px 8px 10px -6px rgba(229, 231, 235, 0.5);
+$dark-theme-shadow: 0px 0px 25px -5px rgb(55 55 55 / 50%), 0px 0px 10px -6px rgb(21 21 21 / 40%);
+$gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(249, 250, 251, 0.7) 100%);
+$body-gradient: linear-gradient(135deg, #eef2ff 0%, #FFFFFF 50%, #EEF2FF 100%);
+
+$humidity: 10%;
+$wind: 20%;
+$pressure: 30%;
+
+
+body {
+    font-family: $montserrat;
+    font-size: 16px;
+    min-height: 100vh;
+    background: $body-gradient;
+}
+
+.container {
+    max-width: 1052px;
+    padding: 0 10px;
+    margin: 0 auto;
+}

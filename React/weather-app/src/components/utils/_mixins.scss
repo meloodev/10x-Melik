@@ -1,0 +1,20 @@
+@mixin flex($df, $jc, $ai, $fd, $gap) {
+    @if $df !=null {
+        display: $df;
+    }
+
+    @if $jc !=null {
+        justify-content: $jc;
+    }
+
+    @if $ai !=null {
+        align-items: $ai;
+    }
+    @if $fd !=null {
+        flex-direction: $fd;
+    }
+
+    @if $gap !=null {
+        gap: $gap
+    }
+}
