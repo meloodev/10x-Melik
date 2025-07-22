@@ -42,3 +42,141 @@ main {
 .hide {
     display: none !important;
 }
+
+
+//////////
+@media (max-width: 768px) {
+    .container__inner {
+        flex-direction: column;
+    }
+
+    .container__right {
+        flex-direction: column;
+        flex: 1 1 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .weather__temp {
+        padding: 25px 15px 25px 15px;
+    }
+
+    .weather__daily {
+        padding: 25px 15px 25px 15px;
+    }
+
+    .weather__details {
+        padding: 25px 15px 25px 15px;
+    }
+
+    .weather__tips {
+        padding: 25px 15px 30px 15px;
+    }
+
+    .weather__header {
+        padding: 25px 15px 25px 15px;
+    }
+
+    .weather__feels-rain {
+        right: 15px;
+        bottom: 25px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .weather__temp {
+        padding: 25px 10px 25px 10px;
+    }
+
+    .weather__daily {
+        padding: 25px 10px 25px 10px;
+    }
+
+    .weather__details {
+        padding: 25px 10px 25px 10px;
+    }
+
+    .weather__tips {
+        padding: 25px 10px 30px 10px;
+    }
+
+    .weather__header {
+        padding: 25px 10px 25px 10px;
+    }
+
+    .weather__info {
+        gap: 10px;
+    }
+
+    .weather__daily-item {
+        padding: 0;
+    }
+
+    .container__inner {
+        gap: 10px;
+    }
+
+    header {
+        margin-bottom: 10px;
+    }
+
+    .container__left {
+        gap: 10px;
+    }
+
+    .container__right {
+        gap: 10px;
+    }
+
+    .weather__sky {
+        width: min-content;
+    }
+}
+
+
+
+@media (max-width: 350px) {
+    .weather__daily-history {
+        font-size: 17px;
+    }
+
+    .weather__overview {
+        font-size: 10px;
+    }
+
+
+}
+
+
+
+@media (any-hover: hover) {
+    .header__icon-cover:hover {
+        background-color: #d2d2d231;
+    }
+
+    .weather__units button:hover {
+        background-color: #d2d2d231;
+    }
+
+    .weather__daily-item:hover {
+        background: rgba(59, 130, 246, 0.1);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    .modal__save-box button:hover {
+        background-color: #d2d2d231;
+    }
+
+    .modal__history-header button:hover {
+        background-color: #d2d2d231;
+    }
+
+    .modal__popular-inner span:hover,
+    .modal__history-cities span:hover {
+        background-color: #84848466;
+        border: 1px solid #00adee;
+
+    }
+}

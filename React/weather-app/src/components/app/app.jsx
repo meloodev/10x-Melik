@@ -6,6 +6,8 @@ import AppDaily from "../appDaily/AppDaily";
 import AppDetails from "../appDetails/AppDetails";
 import AppTips from "../appTips/AppTips";
 
+import Modal from "../modal/Modal";
+
 import './app.scss';
 
 const App = () => {
@@ -26,6 +28,7 @@ const App = () => {
                     </div>
                 </div>
             </main>
+            <Modal />
         </>
     )
 }

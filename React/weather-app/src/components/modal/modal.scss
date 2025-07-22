@@ -1,0 +1,201 @@
+@use '@mixins/mixins' as mixins;
+@use '@mixins/variables' as variables;
+
+.modal {
+    position: fixed;
+    overflow: scroll;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: variables.$body-gradient;
+    padding: 15px 0px;
+}
+
+.modal__header {
+    @include mixins.flex(flex, space-between, center, null, 20px);
+}
+
+.modal__input {
+    position: relative;
+    width: 350px;
+}
+
+.modal__input label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+
+}
+
+.modal__input label img {
+    width: 25px;
+    height: 25px;
+}
+
+.modal__input input {
+    font-family: variables.$montserrat;
+    width: 100%;
+    padding: 10px 8px 10px 33px;
+    border-radius: 99px;
+    background-color: #d2d2d266;
+    font-size: 16px;
+    color: #5d5d5d;
+}
+
+.modal__input input:focus {
+    background-color: #c5c5c566;
+}
+
+.modal__input input::placeholder {
+    font-family: variables.$montserrat;
+    font-size: 16px;
+}
+
+.modal__save-box button {
+    font-family: variables.$montserrat;
+    font-weight: 500;
+    color: #00adee;
+    padding: 3px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    background-color: #e2e2e231;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+}
+
+// .modal__cancel {
+//     background-color: #ececec31;
+// }
+
+.modal__save-box {
+    @include mixins.flex(flex, null, center, null, 20px);
+}
+
+.modal__save-box .modal__save {
+    color: tomato;
+    background-color: #e2e2e231;
+    display: none;
+}
+
+.modal__save-box .modal__save:active {
+    scale: .95;
+}
+
+.modal__save-box button:active {
+    background-color: #d2d2d231;
+}
+
+.modal__header {
+    margin-bottom: 20px;
+}
+
+.modal__history {
+    margin-bottom: 20px;
+}
+
+.modal__history-header {
+    @include mixins.flex(flex, space-between, center, null, null);
+    padding: 0px 20px 10px 20px;
+    color: #0000007a;
+}
+
+.modal__history-header span {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.4784313725);
+    font-size: 16px;
+    user-select: none;
+}
+
+.modal__history-header button {
+    padding: 6px 7px 4px 7px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: background-color .2s ease-in-out;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    color: #0000007a;
+}
+
+// .modal__history-header button:active {
+//     padding: 5px;
+//     background-color: #d2d2d231;
+// }
+
+
+.modal__history-cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.modal__history-cities span {
+    padding: 4px 10px;
+    background-color: #efefef;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.modal__history-cities span:active {
+    background-color: #c5c5c566;
+}
+
+
+.modal__popular-title {
+    color: rgba(0, 0, 0, 0.4784313725);
+    padding-left: 20px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    user-select: none;
+}
+
+.modal__popular-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.modal__popular-inner span {
+    padding: 4px 10px;
+    background-color: #efefef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+.modal__temperature {
+    display: flex;
+    gap: 10px;
+    padding: 0px 0px 20px 20px;
+}
+
+.modal__temperature>div {
+    display: flex;
+    gap: 1px;
+}
+
+.modal__popular-inner span:active {
+    background-color: #c5c5c566;
+}
+
+.modal__popular-notfound {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+
+    color: rgba(0, 0, 0, 0.4784313725);
+    font-weight: 500;
+    font-size: 20px;
+}
