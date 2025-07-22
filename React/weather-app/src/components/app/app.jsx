@@ -1,11 +1,8 @@
 import AppHeader from "../appHeader/appHeader";
-
 import AppTemp from "../appTemp/AppTemp";
 import AppDaily from "../appDaily/AppDaily";
-
 import AppDetails from "../appDetails/AppDetails";
 import AppTips from "../appTips/AppTips";
-
 import Modal from "../modal/Modal";
 
 import './app.scss';
