@@ -1,5 +1,5 @@
-@use '../utils/mixins';
-@use '../utils/variables';
+@use '@mixins/mixins' as mixins;
+@use '@mixins/variables' as variables; 
 
 header {
     margin-bottom: 20px;

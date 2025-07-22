@@ -1,0 +1,74 @@
+@use '@mixins/mixins' as mixins;
+@use '@mixins/variables' as variables;
+
+.details__item-cover {
+    @include mixins.flex(flex, null, center, null, 15px);
+
+}
+
+// .details__item-cover svg {
+//     width: 36px;
+//     height: auto;
+// }
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+
+.weather__details-item.wind svg #wind__speed {
+    animation: rotate360 0s linear infinite;
+    transform-box: fill-box;
+    // transform-origin: 1.237rem 0.992rem !important;
+    transform-origin: 19.792px 15.872px !important;
+    transition: animation 0.3s ease-in-out;
+    // transform-origin: center center;
+    // width: 36px;
+    // height: 36px;
+}
+
+.weather__details-item.pressure svg #presure__speed {
+    transform-box: fill-box;
+    transform: rotate(-90deg);
+    transform-origin: 7.8px 28.0px !important;
+    transition: animation 0.3s ease-in-out;
+}
+
+.weather__details-item.humidity svg #humidity__speed {
+    transform-box: fill-box;
+    transform: rotate(-89deg);
+    transform-origin: 12px 50px !important;
+    transition: animation 0.3s ease-in-out;
+}
+
+
+.details__item-cover span {
+    font-weight: 400;
+    font-size: 15px;
+    color: #475569;
+}
+
+.weather__details-item .details {
+    @include mixins.flex(flex, null, flex-end, column, 12px);
+}
+
+.weather__details-item .details span:nth-child(1) {
+    font-weight: 700;
+    font-size: 17px;
+    color: #1E293B;
+}
+
+.weather__details-item .details .status {
+    font-weight: 400;
+    font-size: 11.5px;
+    color: #22C55E;
+    letter-spacing: .04rem;
+}
+

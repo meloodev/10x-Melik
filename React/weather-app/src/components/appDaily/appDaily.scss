@@ -1,0 +1,199 @@
+@use '@mixins/mixins' as mixins;
+@use '@mixins/variables' as variables; 
+
+.weather__daily {
+    padding: 25px 25px 25px 25px;
+    border-radius: 15px;
+    box-shadow: variables.$shadow;
+    background: variables.$gradient;
+}
+
+.weather__daily-header {
+    @include mixins.flex(flex, space-between, center, null, null);
+    padding-bottom: 25px;
+}
+
+.weather__daily-history {
+    font-weight: 700;
+    font-size: 20px;
+    color: #1E293B;
+}
+
+.weather__overview {
+    font-size: 12px;
+    color: #1D4ED8;
+    padding: 4px 12px;
+    border-radius: 99px;
+    background-color: #DBEAFE;
+    font-weight: 400;
+    font-family: variables.$inter;
+}
+
+.weather__daily-item {
+    @include mixins.flex(flex, space-between, center, null, null);
+    font-family: variables.$inter;
+    min-height: 62px;
+    cursor: pointer;
+    padding: 0px 5px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: background-color .1s ease-in-out;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.weather__daily-item:active {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.active {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.weather__daily-item:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.weather__daily-day {
+    font-weight: 700;
+    font-size: 15.5px;
+    color: #475569;
+    text-transform: capitalize;
+    min-width: 60px;
+    text-align: left;
+}
+
+.weather__daily-status {
+    @include mixins.flex(flex, left, center, null, 12px);
+    font-weight: 400;
+    font-size: 11.5px;
+    color: #64748B;
+    width: 240px;
+    max-width: 100%;
+}
+
+.weather__daily-status>img {
+    width: 24px;
+    height: auto;
+}
+
+.weather__daily-temp {
+    @include mixins.flex(flex, left, center, null, null);
+    min-width: 91px;
+    white-space: nowrap;
+}
+
+.weather__temp-direction {
+    margin-right: 4px;
+}
+
+.weather__temp-degree {
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1E293B;
+}
+
+.weather__temp-feels {
+    font-weight: 400;
+    font-size: 16px;
+    color: #64748B;
+}
+
+
+.weather__details {
+    padding: 25px 25px 25px 25px;
+    border-radius: 15px;
+    box-shadow: variables.$shadow;
+    background: variables.$gradient;
+    font-family: variables.$inter;
+}
+
+
+.weather__details-header {
+    @include mixins.flex(flex, null, center, null, 10px);
+    padding-bottom: 25px;
+}
+
+.weather__details-header img {
+    width: 17px;
+    height: auto;
+}
+
+.weather__details-header h3 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #1E293B;
+    text-transform: capitalize;
+}
+
+.weather__details-item {
+    @include mixins.flex(flex, space-between, center, null, null);
+    position: relative;
+    padding-bottom: 17px;
+    margin-bottom: 29px;
+}
+
+.weather__details-item.wind .details__item-cover {
+    gap: 8px;
+}
+
+.weather__details-item.humidity .details__item-cover {
+    gap: 13px;
+    padding-left: 5px;
+}
+
+.weather__details-item.pressure {
+    padding-left: 3px;
+}
+
+
+.weather__details-item:last-child {
+    margin-bottom: 0px;
+}
+
+.weather__details-item .details__decore {
+    // --humidity-width: #{variables.$humidity};
+    // --wind-width: #{variables.$wind};
+    // --pressure-width: #{variables.$pressure};
+    --humidity-width: 0%;
+    --wind-width: 0%;
+    --pressure-width: 0%;
+
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+    height: 8px;
+    border-radius: 99px;
+    background-color: #E5E7EB;
+}
+
+
+
+.weather__details-item .details__decore::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: tomato;
+    border-radius: 99px;
+}
+
+
+
+.weather__details-item.humidity .details__decore::after {
+    width: var(--humidity-width, 0%);
+}
+
+.weather__details-item.wind .details__decore::after {
+    width: var(--wind-width, 0%);
+}
+
+.weather__details-item.pressure .details__decore::after {
+    width: var(--pressure-width, 0%);
+}
+

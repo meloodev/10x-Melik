@@ -1,0 +1,33 @@
+@use '@mixins/mixins' as mixins;
+@use '@mixins/variables' as variables;
+
+.weather__tips {
+    font-family: variables.$inter;
+    padding: 25px 25px 30px 25px;
+    border-radius: 15px;
+    box-shadow: variables.$shadow;
+    background: variables.$gradient;
+}
+
+.weather__tips-title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #1E293B;
+    padding-bottom: 20px;
+}
+
+.weather__tips-body {
+    @include mixins.flex(flex, center, center, column, 10px);
+}
+
+.weather__tips-body>img {
+    width: 40px;
+    height: auto;
+}
+
+.weather__tips-body p {
+    font-weight: 400;
+    font-size: 15px;
+    color: #475569;
+    text-align: center;
+}
