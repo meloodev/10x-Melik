@@ -3,10 +3,10 @@ import './appTips.scss';
 
 const AppTips = () => {
     return (
-        <aside class="weather__tips">
-            <div class="weather__tips-cover">
-                <h3 class="weather__tips-title">Weather Tips</h3>
-                <div class="weather__tips-body">
+        <aside className="weather__tips">
+            <div className="weather__tips-cover">
+                <h3 className="weather__tips-title">Weather Tips</h3>
+                <div className="weather__tips-body">
                     <img src={enjoy} alt="enjoy" />
                     <p>Enjoy the weather today!</p>
                 </div>

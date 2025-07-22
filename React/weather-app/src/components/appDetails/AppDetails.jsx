@@ -3,16 +3,16 @@ import details from '@images/details.svg';
 
 const AppDetails = () => {
     return (
-        <aside class="weather__details">
-            <div class="weather__details-header">
+        <aside className="weather__details">
+            <div className="weather__details-header">
                 <img src={details} alt="details" />
-                <h3 class="weather__details-title">weather details</h3>
+                <h3 className="weather__details-title">weather details</h3>
             </div>
-            <div class="weather__details-items">
-                <div class="weather__details-item humidity">
-                    <div class="details__item-cover">
+            <div className="weather__details-items">
+                <div className="weather__details-item humidity">
+                    <div className="details__item-cover">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
-                            shape-rendering="geometricPrecision" fill-rule="evenodd" clip-rule="evenodd"
+                            shapeRendering="geometricPrecision" fillRule="evenodd" clipRule="evenodd"
                             viewBox="0 0 173.3 120">
                             <g id="humidity__speed" fill="#1E293B">
                                 <circle cx="89.9" cy="85.8" r="12.5" />
@@ -29,21 +29,21 @@ const AppDetails = () => {
                                 d="m116 13.7 1.3-4.2.6.3 3.2 1.4a62.3 62.3 0 0 1 10 5.5 104.7 104.7 0 0 1 8 5.7 123.2 123.2 0 0 1 10.1 9.9 144 144 0 0 1 5 6.3l.3.3-3.6 2.5-14.2 10.3-3.5 2.5-.4-.5A61.4 61.4 0 0 0 121.5 42a60.4 60.4 0 0 0-9.9-6.2l-2-1-.3-.1 1.3-4.2 5.3-16.7z" />
                             <path id="humidity__speed-three" fill="#00000040"
                                 d="m67.2 10.5-1.3-4.2h.5l2.8-.7a89.2 89.2 0 0 1 27.2-1.3 81.2 81.2 0 0 1 14.7 3l2.4.8.3.2-1.3 4.1-5.3 16.7-1.3 4.2-.5-.2a44.5 44.5 0 0 0-8.8-2.3 53.2 53.2 0 0 0-15-.6 74.7 74.7 0 0 0-7.5 1.1h-.3l-1.3-4-5.3-16.8z" />
-                            <path id="humidity__text" fill="#1E293B" fill-rule="nonzero"
+                            <path id="humidity__text" fill="#1E293B" fillRule="nonzero"
                                 d="M35.8 116v-15.7H38v6.5h8v-6.5H48V116h-2v-7.4h-8.1v7.4h-2zm26-15.7h2v9c0 1.6-.2 2.9-.5 3.8-.4 1-1 1.7-2 2.3-.9.5-2 .8-3.6.8-1.5 0-2.6-.2-3.6-.7-.9-.5-1.6-1.3-2-2.2-.4-1-.6-2.3-.6-4v-9h2.1v9c0 1.4.1 2.4.4 3 .2.7.7 1.2 1.3 1.5.6.4 1.3.6 2.2.6 1.5 0 2.6-.4 3.3-1 .6-.8 1-2 1-4v-9zm5.4 15.7v-15.7h3.1l3.7 11.1.7 2.3.9-2.5 3.7-10.9h2.8V116h-2v-13.1l-4.5 13h-1.9l-4.5-13.2V116h-2zm18.6 0v-15.7h2V116h-2zm5.7 0v-15.7h5.4c1.2 0 2.1.1 2.7.3 1 .2 1.7.5 2.3 1 .9.8 1.5 1.7 1.9 2.8.4 1 .6 2.3.6 3.7a11 11 0 0 1-.4 3.1 8 8 0 0 1-1 2.3l-1.5 1.4c-.5.4-1.1.6-1.9.8-.7.2-1.5.3-2.5.3h-5.6zm2-1.9H97c1 0 1.8 0 2.4-.2.6-.2 1-.5 1.4-.9.5-.5.9-1.1 1.1-2 .3-.8.5-1.8.5-3 0-1.6-.3-2.9-.8-3.7a4.1 4.1 0 0 0-2-1.8c-.5-.2-1.4-.3-2.7-.3h-3.2v12zm14 1.9v-15.7h2.2V116h-2.1zm9.8 0v-13.8H112v-1.8h12.4v1.8h-5.2V116h-2zm13.7 0v-6.7l-6-9h2.5l3.1 4.8a43 43 0 0 1 1.6 2.6l1.7-2.8 3-4.6h2.5l-6.3 9v6.7h-2z" />
                         </svg>
                         <span>Humidity</span>
                     </div>
-                    <div class="details__item-humidity details">
+                    <div className="details__item-humidity details">
                         <span>65%</span>
-                        <span class="status">Normal</span>
+                        <span className="status">Normal</span>
                     </div>
-                    <span class="details__decore"></span>
+                    <span className="details__decore"></span>
                 </div>
-                <div class="weather__details-item wind">
-                    <div class="details__item-cover">
+                <div className="weather__details-item wind">
+                    <div className="details__item-cover">
                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="52"
-                            shape-rendering="geometricPrecision" fill-rule="evenodd" clip-rule="evenodd">
+                            shapeRendering="geometricPrecision" fillRule="evenodd" clipRule="evenodd">
                             <path fill="#CCD1D9"
                                 d="m22.43 23.6.04-.03h.01l.07 1.31a886.15 886.15 0 0 1 .67 12.77l.22 4.46.18 3.91.15 3.41.03.71h-3.89l.04-1.14.21-5.54.29-6.27.33-6.76.28-5.27.08-1.45.01-.12.02.01.07.04.12.05.13.03.14.03.17.01.18-.02.19-.04.15-.05.11-.05z" />
                             <path id="wind__turbine-footer" fill="#1E293B"
@@ -57,16 +57,16 @@ const AppDetails = () => {
                         </svg>
                         <span>Wind Speed</span>
                     </div>
-                    <div class="details__item-wind details">
+                    <div className="details__item-wind details">
                         <span>15 km/h</span>
-                        <span class="status">Moderate</span>
+                        <span className="status">Moderate</span>
                     </div>
-                    <span class="details__decore"></span>
+                    <span className="details__decore"></span>
                 </div>
-                <div class="weather__details-item pressure">
-                    <div class="details__item-cover">
+                <div className="weather__details-item pressure">
+                    <div className="details__item-cover">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
-                            shape-rendering="geometricPrecision" fill-rule="evenodd" clip-rule="evenodd"
+                            shapeRendering="geometricPrecision" fillRule="evenodd" clipRule="evenodd"
                             viewBox="0 0 126.66 126.66">
                             <rect id="pressure__decore-one" fill="#00000080" x="40.45" y="95.13"
                                 width="45.27" height="3.9" rx="2.76" ry="1.95" />
@@ -87,11 +87,11 @@ const AppDetails = () => {
                         </svg>
                         <span>Pressure</span>
                     </div>
-                    <div class="details__item-pressure details">
+                    <div className="details__item-pressure details">
                         <span>1013 hPa</span>
-                        <span class="status">Normal</span>
+                        <span className="status">Normal</span>
                     </div>
-                    <span class="details__decore"></span>
+                    <span className="details__decore"></span>
                 </div>
             </div>
         </aside>

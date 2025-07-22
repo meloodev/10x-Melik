@@ -1,0 +1,46 @@
+.weather__loader-udating {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.weather__loader-udating img {
+    padding: 2px 0px;
+    width: 10px;
+    height: 10px;
+    animation: shakeX 1.2s infinite;
+}
+
+
+@keyframes shakeX {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-1px);
+    }
+
+    50% {
+        transform: translateX(1px);
+    }
+
+    75% {
+        transform: translateX(-1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.weather__loader span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #1E293B;
+}
+
+body.dark .weather__loader-udating span {
+    color: #fff;
+}

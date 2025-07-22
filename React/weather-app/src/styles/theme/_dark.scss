@@ -1,0 +1,306 @@
+@use '@mixins/variables' as variables;
+
+body.dark {
+    background: unset;
+    background-color: #1E1E1E;
+}
+
+body.dark .weather__header {
+    background: unset;
+    background-color: #161622;
+
+}
+
+body.dark .weather__header h1 {
+    color: #fff;
+}
+
+////////menu////////
+body.dark .header__icon-cover {
+    color: #fff;
+}
+
+body.dark .header__icon-cover .settings {
+    background-color: #424242;
+}
+
+body.dark .header__icon-cover .submenu {
+    background-color: #424242 !important;
+}
+
+
+
+
+
+body.dark .header__icon-cover .settings .weather__settings *,
+body.dark .header__icon-cover .settings .weather__theme>*,
+body.dark .weather__theme .submenu .dark>*,
+body.dark .weather__theme .submenu .light>* {
+    color: #fff !important;
+}
+
+// body.dark .header__icon-cover .settings .weather__settings:active *,
+// body.dark .header__icon-cover .settings .weather__theme:active>*,
+// body.dark .weather__theme .submenu .dark:active>*,
+// body.dark .weather__theme .submenu .light:active>* {
+//     color: #000;
+// }
+
+body.dark .header__icon-cover .settings .weather__settings:hover *,
+body.dark .header__icon-cover .settings .weather__theme:hover>*,
+body.dark .weather__theme .submenu .dark:hover>*,
+body.dark .weather__theme .submenu .light:hover>* {
+    color: #000 !important;
+}
+
+////////////////
+
+body.dark .weather__temp {
+    background: unset;
+    background-color: #161622;
+}
+
+body.dark .weather__city h2 {
+    color: #fff;
+}
+
+body.dark .weather__feels span {
+    color: #fff;
+}
+
+body.dark .weather__info .weather__sky {
+    color: #fff;
+}
+
+body.dark .weather__status time {
+    color: #fff;
+}
+
+body.dark .weather__feels-rain span {
+    color: #fff;
+}
+
+body.dark .weather__details {
+    background: unset;
+    background-color: #161622;
+}
+
+body.dark .weather__details-title {
+    color: #fff;
+}
+
+body.dark .details__item-cover span {
+    color: #fff;
+}
+
+body.dark .details__item-cover svg #wind__speed #turbine {
+    fill: #ff6347;
+}
+
+
+body.dark .weather__details-item.pressure svg #pressure__decore-three {
+    fill: tomato;
+}
+
+body.dark .weather__details-item.pressure svg #pressure__decore-one,
+body.dark .weather__details-item.pressure svg #pressure__decore-two {
+    fill: #ffffff90;
+}
+
+body.dark .weather__details-item.wind svg #wind__turbine-footer {
+    fill: #ccd1d9;
+}
+
+body.dark .weather__details-item.pressure svg #pressure__arrow-circle,
+body.dark .weather__details-item.pressure svg #pressure__arrow-arr {
+    fill: #fff;
+}
+
+body.dark .weather__details-item.pressure svg #pressure__arrow-decore {
+    fill: #fff;
+}
+
+body.dark .weather__details-item.humidity svg #humidity__speed,
+body.dark .weather__details-item.humidity svg #humidity__text {
+    fill: #fff;
+}
+
+body.dark .weather__details-item.humidity svg #humidity__speed-one {
+    fill: #ff634740;
+}
+
+body.dark .weather__details-item.humidity svg #humidity__speed-two {
+    fill: #ff634760;
+}
+
+body.dark .weather__details-item.humidity svg #humidity__speed-three {
+    fill: #ff634780;
+}
+
+body.dark .weather__details-item.humidity svg #humidity__speed-four {
+    fill: #ff634790;
+}
+
+body.dark .weather__details-item.humidity svg #humidity__speed-five {
+    fill: #ff6347;
+}
+
+
+
+body.dark .weather__details-item.pressure svg #pressure__decore-cover {
+    fill: #CCD1D9;
+}
+
+
+
+body.dark .details__item-humidity span:nth-child(1),
+body.dark .details__item-wind span:nth-child(1),
+body.dark .details__item-pressure span:nth-child(1) {
+    color: #fff;
+}
+
+
+body.dark .details__item-humidity span:nth-child(2),
+body.dark .details__item-wind span:nth-child(2),
+body.dark .details__item-pressure span:nth-child(2) {
+    color: #22C55E;
+}
+
+body.dark .details__decore {
+    background-color: #00ffe8;
+    // background-color: #F97316;
+}
+
+body.dark .weather__tips {
+    background: unset;
+    background-color: #161622;
+}
+
+body.dark .weather__tips-title,
+body.dark .weather__tips-body p {
+    color: #fff;
+}
+
+body.dark .weather__daily {
+    background: unset;
+    background-color: #161622;
+}
+
+body.dark .weather__daily-day {
+    color: #fff;
+}
+
+body.dark .weather__daily-status span {
+    color: #fff;
+}
+
+body.dark .weather__temp-degree span {
+    color: #fff;
+}
+
+body.dark .weather__daily-history * {
+    color: #fff;
+}
+
+body.dark .weather__temp-feels {
+    color: #d6d6d6;
+}
+
+body.dark .weather__loader-udating span,
+body.dark .weather__loader-done span {
+    color: #fff;
+}
+
+body.dark .weather__header,
+body.dark .weather__details,
+body.dark .weather__daily,
+body.dark .weather__tips,
+body.dark .weather__temp {
+    transition: box-shadow .1s ease-in-out;
+    box-shadow: variables.$dark-theme-shadow;
+}
+
+body.dark .modal__temperature * {
+    color: #fff;
+}
+
+body.dark .modal__history-header span {
+    color: #fff;
+}
+
+
+
+body.dark .modal__popular-title {
+    color: #fff;
+}
+
+body.dark .modal {
+    background: unset;
+    background-color: #161622;
+}
+
+body.dark .modal__popular-inner span,
+body.dark .modal__history-cities span {
+    background-color: #2c3237;
+    color: #fff;
+}
+
+body.dark .modal__input input {
+    color: #fff;
+}
+
+body.dark .modal__input input::placeholder {
+    color: #dcdcdc;
+}
+
+
+body.dark .modal__history-header button {
+    color: tomato;
+    background-color: #38384e;
+    padding: 6px 7px 4px 7px;
+}
+
+body.dark .modal__history-header button:active {
+    background-color: #262635;
+    // padding: 7px;
+}
+
+body.dark .modal__popular-notfound {
+    color: #acacacd9;
+}
+
+body.dark .modal__save-box button {
+    background-color: #ececec31;
+}
+
+body.dark .modal__save-box button:active {
+    background-color: #d2d2d231;
+}
+
+@media (any-hover: hover) {
+
+    body.dark .modal__save-box button:hover {
+        background-color: #d2d2d231;
+    }
+
+    body.dark .modal__popular-inner span:hover,
+    body.dark .modal__history-cities span:hover {
+        background-color: #36180e;
+        color: #fff;
+        border: 1px solid #a93d1f;
+    }
+
+    body.dark .modal__history-header button:hover {
+        background-color: #262635;
+        // padding: 7px;
+    }
+
+
+}
+
+body.dark .modal__popular-inner span:active,
+body.dark .modal__history-cities span:active {
+    background-color: #36180e;
+    color: #fff;
+    border: 1px solid #a93d1f;
+}

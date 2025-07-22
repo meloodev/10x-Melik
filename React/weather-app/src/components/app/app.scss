@@ -1,5 +1,44 @@
-// .container {
-//     max-width: 1052px;
-//     padding: 0 10px;
-//     margin: 0 auto;
-// }
+.container {
+    max-width: 1052px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+main {
+    padding-bottom: 10px;
+}
+
+.container__inner {
+    display: flex;
+    gap: 20px;
+}
+
+.container__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 100%;
+}
+
+.container__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 0 280px;
+}
+
+.reveal {
+    left: 0%;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}

@@ -2,15 +2,15 @@ import './appDaily.scss';
 
 const AppDaily = () => {
     return (
-        <section class="weather__daily">
-            <div class="weather__daily-header">
-                <h3 class="weather__daily-history">
-                    <span class="weather__days">7</span>
+        <section className="weather__daily">
+            <div className="weather__daily-header">
+                <h3 className="weather__daily-history">
+                    <span className="weather__days">7</span>
                     <span>- Day Forecast</span>
                 </h3>
-                <span class="weather__overview">Weekly Overview</span>
+                <span className="weather__overview">Weekly Overview</span>
             </div>
-            <div class="weather__daily-items"></div>
+            <div className="weather__daily-items"></div>
         </section>
     )
 }

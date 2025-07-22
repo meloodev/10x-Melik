@@ -1,0 +1,17 @@
+.weather__loader-done {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.weather__loader-done img {
+    padding: 2px 0px;
+    width: 10px;
+    height: 10px;
+}
+
+.weather__loader-done span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #1E293B;
+}

@@ -1,15 +1,12 @@
+@use './reset';
+@use '../styles/theme/dark';
 @use '@mixins/mixins' as mixins;
-@use '@mixins/variables' as variables; 
+@use '@mixins/variables' as variables;
+
 
 body {
     font-family: variables.$montserrat;
     font-size: 16px;
     min-height: 100vh;
     background: variables.$body-gradient;
-}
-
-.container {
-    max-width: 1052px;
-    padding: 0 10px;
-    margin: 0 auto;
 }

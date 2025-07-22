@@ -1,4 +1,6 @@
 import './appHeader.scss';
+import Loader from '../loaders/spinnerLoader/SpinnerLoader';
+import ErrMessage from '../loaders/errMessage/ErrMessage';
 
 const AppHeader = () => {
     return (
@@ -38,11 +40,15 @@ const AppHeader = () => {
                     </div>
                 </div>
             </div>
-            <div className="loader__cover"></div>
-            <div className="loader"></div>
-            <div className="err__message">
+            {/* <Loader /> */}
+            {/* <ErrMessage /> */}
+
+            {/* <div className="loader__cover"></div>
+            <div className="loader"></div> */}
+            {/* <div className="err__message">
                 <span>something went wrong</span>
-            </div>
+            </div> */}
+
         </header>
     )
 }
