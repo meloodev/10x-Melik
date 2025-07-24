@@ -141,43 +141,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             ],
         },
-        applications: {
-            title: "Applications",
-            list: [
-                {
-                    name: "Illustrator",
-                    rating: 1,
-                },
-                {
-                    name: "Photoshop",
-                    rating: 5,
-                },
-                {
-                    name: "After Effects",
-                    rating: 3,
-                },
-                {
-                    name: "Premiere Pro",
-                    rating: 3,
-                },
-                {
-                    name: "Character Animator",
-                    rating: 3,
-                },
-                {
-                    name: "Blender",
-                    rating: 3,
-                },
-                {
-                    name: "Maya",
-                    rating: 3,
-                },
-                {
-                    name: "Corel",
-                    rating: 3,
-                }
-            ],
-        },
+        // applications: {
+        //     title: "Applications",
+        //     list: [
+        //         {
+        //             name: "Illustrator",
+        //             rating: 1,
+        //         },
+        //         {
+        //             name: "Photoshop",
+        //             rating: 5,
+        //         },
+        //         {
+        //             name: "After Effects",
+        //             rating: 3,
+        //         },
+        //         {
+        //             name: "Premiere Pro",
+        //             rating: 3,
+        //         },
+        //         {
+        //             name: "Character Animator",
+        //             rating: 3,
+        //         },
+        //         {
+        //             name: "Blender",
+        //             rating: 3,
+        //         },
+        //         {
+        //             name: "Maya",
+        //             rating: 3,
+        //         },
+        //         {
+        //             name: "Corel",
+        //             rating: 3,
+        //         }
+        //     ],
+        // },
         skills: {
             title: "Skills",
             list: [
