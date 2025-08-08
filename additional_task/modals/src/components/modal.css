@@ -1,0 +1,32 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #00000038;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__inner {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.modal__inner h2 {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.modal__inner button {
+    font-family: "Montserrat", sans-serif;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
+    font-weight: 500;
+}
