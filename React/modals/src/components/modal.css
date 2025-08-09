@@ -14,6 +14,7 @@
     padding: 20px;
     border-radius: 10px;
     background-color: #fff;
+    min-width: 215px;
 }
 
 .modal__inner h2 {
@@ -23,10 +24,15 @@
 
 .modal__inner button {
     font-family: "Montserrat", sans-serif;
-    width: 100px;
+    width: 100%;
     height: 30px;
     border-radius: 4px;
     background-color: rgb(231, 231, 231);
     cursor: pointer;
     font-weight: 500;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.modal__inner button:active {
+    scale: 1.02;
 }

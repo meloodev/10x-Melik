@@ -8,7 +8,7 @@ const Modals = () => {
 
   const mess = {// მესეჯები მოდალისთვის
     red: 'red modal',
-    green: 'green modal' 
+    green: 'green modal'
   }
 
   const toggleModal = (type) => {
@@ -18,9 +18,11 @@ const Modals = () => {
 
   return (
     <>
-      <div className="wrapper">
-        <button onClick={() => toggleModal('red')} className="modal__one">Modal-1</button>
-        <button onClick={() => toggleModal('green')} className="modal__two">Modal-2</button>
+      <div className="container">
+        <div className="wrapper">
+          <button onClick={() => toggleModal('red')} className="modal__one">Modal-1</button>
+          <button onClick={() => toggleModal('green')} className="modal__two">Modal-2</button>
+        </div>
       </div>
       {modal && <Modal onClose={toggleModal} mess={mess[modalType]} />}
     </>
